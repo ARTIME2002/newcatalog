@@ -34,9 +34,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-BR-HFE-6IN-1.png",
-        "images/products/ART-BR-HFE-6IN-2.png",
-        "images/products/ART-BR-HFE-6IN-3.png"
+        "images/products/ART-BR-HFE-6IN-1.jpg",
+        "images/products/ART-BR-HFE-6IN-2.jpg",
+        "images/products/ART-BR-HFE-6IN-3.jpg"
       ],
       "prices": {
         "tier1": 2850,
@@ -64,9 +64,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-BR-HFE-8IN-1.png",
-        "images/products/ART-BR-HFE-8IN-2.png",
-        "images/products/ART-BR-HFE-8IN-3.png"
+        "images/products/ART-BR-HFE-8IN-1.jpg",
+        "images/products/ART-BR-HFE-8IN-2.jpg",
+        "images/products/ART-BR-HFE-8IN-3.jpg"
       ],
       "prices": {
         "tier1": 3450,
@@ -94,9 +94,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-BR-HFE-10IN-1.png",
-        "images/products/ART-BR-HFE-10IN-2.png",
-        "images/products/ART-BR-HFE-10IN-3.png"
+        "images/products/ART-BR-HFE-10IN-1.jpg",
+        "images/products/ART-BR-HFE-10IN-2.jpg",
+        "images/products/ART-BR-HFE-10IN-3.jpg"
       ],
       "prices": {
         "tier1": 4400,
@@ -124,8 +124,8 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-BR-HFE-12IN-1.png",
-        "images/products/ART-BR-HFE-12IN-2.png",
+        "images/products/ART-BR-HFE-12IN-1.jpg",
+        "images/products/ART-BR-HFE-12IN-2.jpg",
         "images/products/ART-BR-HFE-12IN-3.jpg"
       ],
       "prices": {
@@ -154,9 +154,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-CP-HFE-6IN-1.png",
-        "images/products/ART-CP-HFE-6IN-2.png",
-        "images/products/ART-CP-HFE-6IN-3.png"
+        "images/products/ART-CP-HFE-6IN-1.jpg",
+        "images/products/ART-CP-HFE-6IN-2.jpg",
+        "images/products/ART-CP-HFE-6IN-3.jpg"
       ],
       "prices": {
         "tier1": 2850,
@@ -184,9 +184,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-CP-HFE-8IN-1.png",
-        "images/products/ART-CP-HFE-8IN-2.png",
-        "images/products/ART-CP-HFE-8IN-3.png"
+        "images/products/ART-CP-HFE-8IN-1.jpg",
+        "images/products/ART-CP-HFE-8IN-2.jpg",
+        "images/products/ART-CP-HFE-8IN-3.jpg"
       ],
       "prices": {
         "tier1": 3450,
@@ -214,9 +214,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-CP-HFE-10IN-1.png",
-        "images/products/ART-CP-HFE-10IN-2.png",
-        "images/products/ART-CP-HFE-10IN-3.png"
+        "images/products/ART-CP-HFE-10IN-1.jpg",
+        "images/products/ART-CP-HFE-10IN-2.jpg",
+        "images/products/ART-CP-HFE-10IN-3.jpg"
       ],
       "prices": {
         "tier1": 4400,
@@ -244,8 +244,8 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-CP-HFE-12IN-1.png",
-        "images/products/ART-CP-HFE-12IN-2.png",
+        "images/products/ART-CP-HFE-12IN-1.jpg",
+        "images/products/ART-CP-HFE-12IN-2.jpg",
         "images/products/ART-CP-HFE-12IN-3.jpg"
       ],
       "prices": {
@@ -274,9 +274,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-SV-HFE-6IN-1.png",
-        "images/products/ART-SV-HFE-6IN-2.png",
-        "images/products/ART-SV-HFE-6IN-3.png"
+        "images/products/ART-SV-HFE-6IN-1.jpg",
+        "images/products/ART-SV-HFE-6IN-2.jpg",
+        "images/products/ART-SV-HFE-6IN-3.jpg"
       ],
       "prices": {
         "tier1": 2850,
@@ -304,9 +304,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-SV-HFE-8IN-1.png",
-        "images/products/ART-SV-HFE-8IN-2.png",
-        "images/products/ART-SV-HFE-8IN-3.png"
+        "images/products/ART-SV-HFE-8IN-1.jpg",
+        "images/products/ART-SV-HFE-8IN-2.jpg",
+        "images/products/ART-SV-HFE-8IN-3.jpg"
       ],
       "prices": {
         "tier1": 3250,
@@ -334,7 +334,7 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-SV-HFE-10IN-1.png",
+        "images/products/ART-SV-HFE-10IN-1.jpg",
         null,
         null
       ],
@@ -364,9 +364,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-BR-BLM-6IN-1.png",
-        "images/products/ART-BR-BLM-6IN-2.png",
-        "images/products/ART-BR-BLM-6IN-3.png"
+        "images/products/ART-BR-BLM-6IN-1.jpg",
+        "images/products/ART-BR-BLM-6IN-2.jpg",
+        "images/products/ART-BR-BLM-6IN-3.jpg"
       ],
       "prices": {
         "tier1": 2850,
@@ -395,7 +395,7 @@
       ],
       "images": [
         "images/products/ART-BR-BLM-8IN-1.jpg",
-        "images/products/ART-BR-BLM-8IN-2.png",
+        "images/products/ART-BR-BLM-8IN-2.jpg",
         "images/products/ART-BR-BLM-8IN-3.jpg"
       ],
       "prices": {
@@ -424,9 +424,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-CP-BLM-6IN-1.png",
-        "images/products/ART-CP-BLM-6IN-2.png",
-        "images/products/ART-CP-BLM-6IN-3.png"
+        "images/products/ART-CP-BLM-6IN-1.jpg",
+        "images/products/ART-CP-BLM-6IN-2.jpg",
+        "images/products/ART-CP-BLM-6IN-3.jpg"
       ],
       "prices": {
         "tier1": 2850,
@@ -454,9 +454,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-CP-BLM-8IN-1.png",
-        "images/products/ART-CP-BLM-8IN-2.png",
-        "images/products/ART-CP-BLM-8IN-3.png"
+        "images/products/ART-CP-BLM-8IN-1.jpg",
+        "images/products/ART-CP-BLM-8IN-2.jpg",
+        "images/products/ART-CP-BLM-8IN-3.jpg"
       ],
       "prices": {
         "tier1": 3450,
@@ -484,7 +484,7 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-SV-BLM-6IN-1.png",
+        "images/products/ART-SV-BLM-6IN-1.jpg",
         null,
         null
       ],
@@ -514,8 +514,8 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-SV-BLM-8IN-1.png",
-        "images/products/ART-SV-BLM-8IN-2.png",
+        "images/products/ART-SV-BLM-8IN-1.jpg",
+        "images/products/ART-SV-BLM-8IN-2.jpg",
         "images/products/ART-SV-BLM-8IN-3.jpg"
       ],
       "prices": {
@@ -544,7 +544,7 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-SV-HFE-12IN-1.png",
+        "images/products/ART-SV-HFE-12IN-1.jpg",
         null,
         null
       ],
@@ -574,8 +574,8 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-CP-STJ-6IN-1.png",
-        "images/products/ART-CP-STJ-6IN-2.png",
+        "images/products/ART-CP-STJ-6IN-1.jpg",
+        "images/products/ART-CP-STJ-6IN-2.jpg",
         null
       ],
       "prices": {
@@ -604,8 +604,8 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-CP-STJ-8IN-1.png",
-        "images/products/ART-CP-STJ-8IN-2.png",
+        "images/products/ART-CP-STJ-8IN-1.jpg",
+        "images/products/ART-CP-STJ-8IN-2.jpg",
         null
       ],
       "prices": {
@@ -634,8 +634,8 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-CP-STJ-10IN-1.png",
-        "images/products/ART-CP-STJ-10IN-2.png",
+        "images/products/ART-CP-STJ-10IN-1.jpg",
+        "images/products/ART-CP-STJ-10IN-2.jpg",
         "images/products/ART-CP-STJ-10IN-3.jpg"
       ],
       "prices": {
@@ -664,8 +664,8 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-CP-STJ-12IN-1.png",
-        "images/products/ART-CP-STJ-12IN-2.png",
+        "images/products/ART-CP-STJ-12IN-1.jpg",
+        "images/products/ART-CP-STJ-12IN-2.jpg",
         "images/products/ART-CP-STJ-12IN-3.jpg"
       ],
       "prices": {
@@ -694,8 +694,8 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-BR-STJ-6IN-1.png",
-        "images/products/ART-BR-STJ-6IN-2.png",
+        "images/products/ART-BR-STJ-6IN-1.jpg",
+        "images/products/ART-BR-STJ-6IN-2.jpg",
         "images/products/ART-BR-STJ-6IN-3.jpg"
       ],
       "prices": {
@@ -724,8 +724,8 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-BR-STJ-8IN-1.png",
-        "images/products/ART-BR-STJ-8IN-2.png",
+        "images/products/ART-BR-STJ-8IN-1.jpg",
+        "images/products/ART-BR-STJ-8IN-2.jpg",
         "images/products/ART-BR-STJ-8IN-3.jpg"
       ],
       "prices": {
@@ -754,9 +754,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-BR-STJ-10IN-1.png",
+        "images/products/ART-BR-STJ-10IN-1.jpg",
         "images/products/ART-BR-STJ-10IN-2.jpg",
-        "images/products/ART-BR-STJ-10IN-3.png"
+        "images/products/ART-BR-STJ-10IN-3.jpg"
       ],
       "prices": {
         "tier1": 4400,
@@ -784,9 +784,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-BR-STJ-12IN-1.png",
+        "images/products/ART-BR-STJ-12IN-1.jpg",
         "images/products/ART-BR-STJ-12IN-2.jpg",
-        "images/products/ART-BR-STJ-12IN-3.png"
+        "images/products/ART-BR-STJ-12IN-3.jpg"
       ],
       "prices": {
         "tier1": 5200,
@@ -814,9 +814,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-SV-STJ-6IN-1.png",
-        "images/products/ART-SV-STJ-6IN-2.png",
-        "images/products/ART-SV-STJ-6IN-3.png"
+        "images/products/ART-SV-STJ-6IN-1.jpg",
+        "images/products/ART-SV-STJ-6IN-2.jpg",
+        "images/products/ART-SV-STJ-6IN-3.jpg"
       ],
       "prices": {
         "tier1": 2850,
@@ -844,9 +844,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-SV-STJ-8IN-1.png",
-        "images/products/ART-SV-STJ-8IN-2.png",
-        "images/products/ART-SV-STJ-8IN-3.png"
+        "images/products/ART-SV-STJ-8IN-1.jpg",
+        "images/products/ART-SV-STJ-8IN-2.jpg",
+        "images/products/ART-SV-STJ-8IN-3.jpg"
       ],
       "prices": {
         "tier1": 3250,
@@ -874,7 +874,7 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-SV-STJ-10IN-1.png",
+        "images/products/ART-SV-STJ-10IN-1.jpg",
         null,
         null
       ],
@@ -904,7 +904,7 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-SV-STJ-12IN-1.png",
+        "images/products/ART-SV-STJ-12IN-1.jpg",
         null,
         null
       ],
@@ -934,8 +934,8 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-BK-STJ-6IN-1.png",
-        "images/products/ART-BK-STJ-6IN-2.png",
+        "images/products/ART-BK-STJ-6IN-1.jpg",
+        "images/products/ART-BK-STJ-6IN-2.jpg",
         "images/products/ART-BK-STJ-6IN-3.jpg"
       ],
       "prices": {
@@ -964,8 +964,8 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-BK-STJ-8IN-1.png",
-        "images/products/ART-BK-STJ-8IN-2.png",
+        "images/products/ART-BK-STJ-8IN-1.jpg",
+        "images/products/ART-BK-STJ-8IN-2.jpg",
         "images/products/ART-BK-STJ-8IN-3.jpg"
       ],
       "prices": {
@@ -994,9 +994,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-BK-STJ-10IN-1.png",
-        "images/products/ART-BK-STJ-10IN-2.png",
-        "images/products/ART-BK-STJ-10IN-3.png"
+        "images/products/ART-BK-STJ-10IN-1.jpg",
+        "images/products/ART-BK-STJ-10IN-2.jpg",
+        "images/products/ART-BK-STJ-10IN-3.jpg"
       ],
       "prices": {
         "tier1": 4400,
@@ -1024,9 +1024,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-BK-STJ-12IN-1.png",
-        "images/products/ART-BK-STJ-12IN-2.png",
-        "images/products/ART-BK-STJ-12IN-3.png"
+        "images/products/ART-BK-STJ-12IN-1.jpg",
+        "images/products/ART-BK-STJ-12IN-2.jpg",
+        "images/products/ART-BK-STJ-12IN-3.jpg"
       ],
       "prices": {
         "tier1": 5200,
@@ -1054,9 +1054,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-CP-CNC-6IN-1.png",
-        "images/products/ART-CP-CNC-6IN-2.png",
-        "images/products/ART-CP-CNC-6IN-3.png"
+        "images/products/ART-CP-CNC-6IN-1.jpg",
+        "images/products/ART-CP-CNC-6IN-2.jpg",
+        "images/products/ART-CP-CNC-6IN-3.jpg"
       ],
       "prices": {
         "tier1": 2850,
@@ -1084,9 +1084,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-CP-CNC-8IN-1.png",
-        "images/products/ART-CP-CNC-8IN-2.png",
-        "images/products/ART-CP-CNC-8IN-3.png"
+        "images/products/ART-CP-CNC-8IN-1.jpg",
+        "images/products/ART-CP-CNC-8IN-2.jpg",
+        "images/products/ART-CP-CNC-8IN-3.jpg"
       ],
       "prices": {
         "tier1": 3250,
@@ -1115,7 +1115,7 @@
       ],
       "images": [
         "images/products/ART-CP-CNC-10IN-1.jpg",
-        "images/products/ART-CP-CNC-10IN-2.png",
+        "images/products/ART-CP-CNC-10IN-2.jpg",
         null
       ],
       "prices": {
@@ -1145,7 +1145,7 @@
       ],
       "images": [
         "images/products/ART-CP-CNC-12IN-1.jpg",
-        "images/products/ART-CP-CNC-12IN-2.png",
+        "images/products/ART-CP-CNC-12IN-2.jpg",
         null
       ],
       "prices": {
@@ -1174,9 +1174,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-BR-CNC-6IN-1.png",
+        "images/products/ART-BR-CNC-6IN-1.jpg",
         "images/products/ART-BR-CNC-6IN-2.jpg",
-        "images/products/ART-BR-CNC-6IN-3.png"
+        "images/products/ART-BR-CNC-6IN-3.jpg"
       ],
       "prices": {
         "tier1": 2850,
@@ -1204,9 +1204,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-BR-CNC-8IN-1.png",
+        "images/products/ART-BR-CNC-8IN-1.jpg",
         "images/products/ART-BR-CNC-8IN-2.jpg",
-        "images/products/ART-BR-CNC-8IN-3.png"
+        "images/products/ART-BR-CNC-8IN-3.jpg"
       ],
       "prices": {
         "tier1": 3250,
@@ -1234,9 +1234,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-BR-CNC-10IN-1.png",
+        "images/products/ART-BR-CNC-10IN-1.jpg",
         "images/products/ART-BR-CNC-10IN-2.jpg",
-        "images/products/ART-BR-CNC-10IN-3.png"
+        "images/products/ART-BR-CNC-10IN-3.jpg"
       ],
       "prices": {
         "tier1": 4400,
@@ -1264,9 +1264,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-BR-CNC-12IN-1.png",
+        "images/products/ART-BR-CNC-12IN-1.jpg",
         "images/products/ART-BR-CNC-12IN-2.jpg",
-        "images/products/ART-BR-CNC-12IN-3.png"
+        "images/products/ART-BR-CNC-12IN-3.jpg"
       ],
       "prices": {
         "tier1": 4400,
@@ -1294,9 +1294,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-SV-CNC-6IN-1.png",
-        "images/products/ART-SV-CNC-6IN-2.png",
-        "images/products/ART-SV-CNC-6IN-3.png"
+        "images/products/ART-SV-CNC-6IN-1.jpg",
+        "images/products/ART-SV-CNC-6IN-2.jpg",
+        "images/products/ART-SV-CNC-6IN-3.jpg"
       ],
       "prices": {
         "tier1": 2850,
@@ -1324,9 +1324,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-SV-CNC-8IN-1.png",
-        "images/products/ART-SV-CNC-8IN-2.png",
-        "images/products/ART-SV-CNC-8IN-3.png"
+        "images/products/ART-SV-CNC-8IN-1.jpg",
+        "images/products/ART-SV-CNC-8IN-2.jpg",
+        "images/products/ART-SV-CNC-8IN-3.jpg"
       ],
       "prices": {
         "tier1": 3250,
@@ -1354,9 +1354,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-SV-CNC-10IN-1.png",
-        "images/products/ART-SV-CNC-10IN-2.png",
-        "images/products/ART-SV-CNC-10IN-3.png"
+        "images/products/ART-SV-CNC-10IN-1.jpg",
+        "images/products/ART-SV-CNC-10IN-2.jpg",
+        "images/products/ART-SV-CNC-10IN-3.jpg"
       ],
       "prices": {
         "tier1": 4400,
@@ -1384,9 +1384,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-SV-CNC-12IN-1.png",
-        "images/products/ART-SV-CNC-12IN-2.png",
-        "images/products/ART-SV-CNC-12IN-3.png"
+        "images/products/ART-SV-CNC-12IN-1.jpg",
+        "images/products/ART-SV-CNC-12IN-2.jpg",
+        "images/products/ART-SV-CNC-12IN-3.jpg"
       ],
       "prices": {
         "tier1": 5200,
@@ -1414,9 +1414,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-BK-CNC-6IN-1.png",
+        "images/products/ART-BK-CNC-6IN-1.jpg",
         "images/products/ART-BK-CNC-6IN-2.jpg",
-        "images/products/ART-BK-CNC-6IN-3.png"
+        "images/products/ART-BK-CNC-6IN-3.jpg"
       ],
       "prices": {
         "tier1": 2850,
@@ -1444,9 +1444,9 @@
         "Ideal for Homes & Hotels"
       ],
       "images": [
-        "images/products/ART-BK-CNC-8IN-1.png",
+        "images/products/ART-BK-CNC-8IN-1.jpg",
         "images/products/ART-BK-CNC-8IN-2.jpg",
-        "images/products/ART-BK-CNC-8IN-3.png"
+        "images/products/ART-BK-CNC-8IN-3.jpg"
       ],
       "prices": {
         "tier1": 3250,
@@ -1476,7 +1476,7 @@
       "images": [
         "images/products/ART-BK-CNC-10IN-1.jpg",
         "images/products/ART-BK-CNC-10IN-2.jpg",
-        "images/products/ART-BK-CNC-10IN-3.png"
+        "images/products/ART-BK-CNC-10IN-3.jpg"
       ],
       "prices": {
         "tier1": 4400,
@@ -1506,7 +1506,7 @@
       "images": [
         "images/products/ART-BK-CNC-12IN-1.jpg",
         "images/products/ART-BK-CNC-12IN-2.jpg",
-        "images/products/ART-BK-CNC-12IN-3.png"
+        "images/products/ART-BK-CNC-12IN-3.jpg"
       ],
       "prices": {
         "tier1": 5200,
