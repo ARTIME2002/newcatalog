@@ -1,0 +1,1521 @@
+{
+  "brand": "ARTIME",
+  "collection": "Heritage Railway Collection",
+  "tierLabels": {
+    "tier1": "Retail",
+    "tier2": "Distributor",
+    "tier3": "Wholesale",
+    "tier4": "Export",
+    "tier5": "VIP"
+  },
+  "passwords": {
+    "tier1": "retail2026",
+    "tier2": "distributor2026",
+    "tier3": "wholesale2026",
+    "tier4": "export2026",
+    "tier5": "vip2026"
+  },
+  "adminPassword": "artime@admin2026",
+  "products": [
+    {
+      "code": "ART-BR-HFE-6IN",
+      "finish": "Brass",
+      "pattern": "Heritage Floral Engraving",
+      "size": "6*4*6 inches",
+      "title": "Brass Heritage Floral Engraving — Double Sided Station Clock",
+      "description": "Solid Brass double-sided clock featuring a rich Brass Heritage Floral Engraving drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 6-Inch Dial",
+        "Elegant Brass Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-BR-HFE-6IN-1.png",
+        "images/products/ART-BR-HFE-6IN-2.png",
+        "images/products/ART-BR-HFE-6IN-3.png"
+      ],
+      "prices": {
+        "tier1": 2850,
+        "tier2": 2850,
+        "tier3": 2850,
+        "tier4": 2850,
+        "tier5": 2850
+      },
+      "active": true
+    },
+    {
+      "code": "ART-BR-HFE-8IN",
+      "finish": "Brass",
+      "pattern": "Heritage Floral Engraving",
+      "size": "8*4*8 inches",
+      "title": "Brass Heritage Floral Engraving — Double Sided Station Clock",
+      "description": "Solid Brass double-sided clock featuring a rich Brass Heritage Floral Engraving drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 8-Inch Dial",
+        "Elegant Brass Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-BR-HFE-8IN-1.png",
+        "images/products/ART-BR-HFE-8IN-2.png",
+        "images/products/ART-BR-HFE-8IN-3.png"
+      ],
+      "prices": {
+        "tier1": 3450,
+        "tier2": 3450,
+        "tier3": 3450,
+        "tier4": 3450,
+        "tier5": 3450
+      },
+      "active": true
+    },
+    {
+      "code": "ART-BR-HFE-10IN",
+      "finish": "Brass",
+      "pattern": "Heritage Floral Engraving",
+      "size": "10*5*10 inches",
+      "title": "Brass Heritage Floral Engraving — Double Sided Station Clock",
+      "description": "Solid Brass double-sided clock featuring a rich Brass Heritage Floral Engraving drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 10-Inch Dial",
+        "Elegant Brass Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-BR-HFE-10IN-1.png",
+        "images/products/ART-BR-HFE-10IN-2.png",
+        "images/products/ART-BR-HFE-10IN-3.png"
+      ],
+      "prices": {
+        "tier1": 4400,
+        "tier2": 4400,
+        "tier3": 4400,
+        "tier4": 4400,
+        "tier5": 4400
+      },
+      "active": true
+    },
+    {
+      "code": "ART-BR-HFE-12IN",
+      "finish": "Brass",
+      "pattern": "Heritage Floral Engraving",
+      "size": "12*5*12 inches",
+      "title": "Brass Heritage Floral Engraving — Double Sided Station Clock",
+      "description": "Solid Brass double-sided clock featuring a rich Brass Heritage Floral Engraving drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 12-Inch Dial",
+        "Elegant Brass Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-BR-HFE-12IN-1.png",
+        "images/products/ART-BR-HFE-12IN-2.png",
+        "images/products/ART-BR-HFE-12IN-3.jpg"
+      ],
+      "prices": {
+        "tier1": 5200,
+        "tier2": 5200,
+        "tier3": 5200,
+        "tier4": 5200,
+        "tier5": 5200
+      },
+      "active": true
+    },
+    {
+      "code": "ART-CP-HFE-6IN",
+      "finish": "Copper",
+      "pattern": "Heritage Floral Engraving",
+      "size": "6*4*6 inches",
+      "title": "Copper Heritage Floral Engraving — Double Sided Station Clock",
+      "description": "Solid copper double-sided clock featuring a rich Copper Heritage Floral Engraving drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 6-Inch Dial",
+        "Elegant Copper Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-CP-HFE-6IN-1.png",
+        "images/products/ART-CP-HFE-6IN-2.png",
+        "images/products/ART-CP-HFE-6IN-3.png"
+      ],
+      "prices": {
+        "tier1": 2850,
+        "tier2": 2850,
+        "tier3": 2850,
+        "tier4": 2850,
+        "tier5": 2850
+      },
+      "active": true
+    },
+    {
+      "code": "ART-CP-HFE-8IN",
+      "finish": "Copper",
+      "pattern": "Heritage Floral Engraving",
+      "size": "8*4*8 inches",
+      "title": "Copper Heritage Floral Engraving — Double Sided Station Clock",
+      "description": "Solid copper double-sided clock featuring a rich Copper Heritage Floral Engraving drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 8-Inch Dial",
+        "Elegant Copper Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-CP-HFE-8IN-1.png",
+        "images/products/ART-CP-HFE-8IN-2.png",
+        "images/products/ART-CP-HFE-8IN-3.png"
+      ],
+      "prices": {
+        "tier1": 3450,
+        "tier2": 3450,
+        "tier3": 3450,
+        "tier4": 3450,
+        "tier5": 3450
+      },
+      "active": true
+    },
+    {
+      "code": "ART-CP-HFE-10IN",
+      "finish": "Copper",
+      "pattern": "Heritage Floral Engraving",
+      "size": "10*5*10 inches",
+      "title": "Copper Heritage Floral Engraving — Double Sided Station Clock",
+      "description": "Solid copper double-sided clock featuring a rich Copper Heritage Floral Engraving drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 10-Inch Dial",
+        "Elegant Copper Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-CP-HFE-10IN-1.png",
+        "images/products/ART-CP-HFE-10IN-2.png",
+        "images/products/ART-CP-HFE-10IN-3.png"
+      ],
+      "prices": {
+        "tier1": 4400,
+        "tier2": 4400,
+        "tier3": 4400,
+        "tier4": 4400,
+        "tier5": 4400
+      },
+      "active": true
+    },
+    {
+      "code": "ART-CP-HFE-12IN",
+      "finish": "Copper",
+      "pattern": "Heritage Floral Engraving",
+      "size": "12*5*12 inches",
+      "title": "Copper Heritage Floral Engraving — Double Sided Station Clock",
+      "description": "Solid copper double-sided clock featuring a rich Copper Heritage Floral Engraving drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 12-Inch Dial",
+        "Elegant Copper Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-CP-HFE-12IN-1.png",
+        "images/products/ART-CP-HFE-12IN-2.png",
+        "images/products/ART-CP-HFE-12IN-3.jpg"
+      ],
+      "prices": {
+        "tier1": 5200,
+        "tier2": 5200,
+        "tier3": 5200,
+        "tier4": 5200,
+        "tier5": 5200
+      },
+      "active": true
+    },
+    {
+      "code": "ART-SV-HFE-6IN",
+      "finish": "Silver",
+      "pattern": "Heritage Floral Engraving",
+      "size": "6*4*6 inches",
+      "title": "Silver Heritage Floral Engraving — Double Sided Station Clock",
+      "description": "Solid Silver double-sided clock featuring a rich Silver Heritage Floral Engraving drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 6-Inch Dial",
+        "Elegant Silver Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-SV-HFE-6IN-1.png",
+        "images/products/ART-SV-HFE-6IN-2.png",
+        "images/products/ART-SV-HFE-6IN-3.png"
+      ],
+      "prices": {
+        "tier1": 2850,
+        "tier2": 2850,
+        "tier3": 2850,
+        "tier4": 2850,
+        "tier5": 2850
+      },
+      "active": true
+    },
+    {
+      "code": "ART-SV-HFE-8IN",
+      "finish": "Silver",
+      "pattern": "Heritage Floral Engraving",
+      "size": "8*4*8 inches",
+      "title": "Silver Heritage Floral Engraving — Double Sided Station Clock",
+      "description": "Solid Silver double-sided clock featuring a rich Silver Heritage Floral Engraving drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 8-Inch Dial",
+        "Elegant Silver Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-SV-HFE-8IN-1.png",
+        "images/products/ART-SV-HFE-8IN-2.png",
+        "images/products/ART-SV-HFE-8IN-3.png"
+      ],
+      "prices": {
+        "tier1": 3250,
+        "tier2": 3250,
+        "tier3": 3250,
+        "tier4": 3250,
+        "tier5": 3250
+      },
+      "active": true
+    },
+    {
+      "code": "ART-SV-HFE-10IN",
+      "finish": "Silver",
+      "pattern": "Heritage Floral Engraving",
+      "size": "10*5*10 inches",
+      "title": "Silver Heritage Floral Engraving — Double Sided Station Clock",
+      "description": "Solid Silver double-sided clock featuring a rich Silver Heritage Floral Engraving drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 10-Inch Dial",
+        "Elegant Silver Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-SV-HFE-10IN-1.png",
+        null,
+        null
+      ],
+      "prices": {
+        "tier1": 4400,
+        "tier2": 4400,
+        "tier3": 4400,
+        "tier4": 4400,
+        "tier5": 4400
+      },
+      "active": true
+    },
+    {
+      "code": "ART-BR-BLM-6IN",
+      "finish": "Brass",
+      "pattern": "Bloomwork",
+      "size": "6*4*6 inches",
+      "title": "Brass Bloomwork — Double Sided Station Clock",
+      "description": "Solid Brass double-sided clock featuring a rich Brass Bloomwork drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 6-Inch Dial",
+        "Elegant Brass Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-BR-BLM-6IN-1.png",
+        "images/products/ART-BR-BLM-6IN-2.png",
+        "images/products/ART-BR-BLM-6IN-3.png"
+      ],
+      "prices": {
+        "tier1": 2850,
+        "tier2": 2850,
+        "tier3": 2850,
+        "tier4": 2850,
+        "tier5": 2850
+      },
+      "active": true
+    },
+    {
+      "code": "ART-BR-BLM-8IN",
+      "finish": "Brass",
+      "pattern": "Bloomwork",
+      "size": "8*4*8 inches",
+      "title": "Brass Bloomwork — Double Sided Station Clock",
+      "description": "Solid Brass double-sided clock featuring a rich Brass Bloomwork drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 8-Inch Dial",
+        "Elegant Brass Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-BR-BLM-8IN-1.jpg",
+        "images/products/ART-BR-BLM-8IN-2.png",
+        "images/products/ART-BR-BLM-8IN-3.jpg"
+      ],
+      "prices": {
+        "tier1": 3450,
+        "tier2": 3450,
+        "tier3": 3450,
+        "tier4": 3450,
+        "tier5": 3450
+      },
+      "active": true
+    },
+    {
+      "code": "ART-CP-BLM-6IN",
+      "finish": "Copper",
+      "pattern": "Bloomwork",
+      "size": "6*4*6 inches",
+      "title": "Copper Bloomwork — Double Sided Station Clock",
+      "description": "Solid copper double-sided clock featuring a rich Copper Bloomwork drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 6-Inch Dial",
+        "Elegant Copper Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-CP-BLM-6IN-1.png",
+        "images/products/ART-CP-BLM-6IN-2.png",
+        "images/products/ART-CP-BLM-6IN-3.png"
+      ],
+      "prices": {
+        "tier1": 2850,
+        "tier2": 2850,
+        "tier3": 2850,
+        "tier4": 2850,
+        "tier5": 2850
+      },
+      "active": true
+    },
+    {
+      "code": "ART-CP-BLM-8IN",
+      "finish": "Copper",
+      "pattern": "Bloomwork",
+      "size": "8*4*8 inches",
+      "title": "Copper Bloomwork — Double Sided Station Clock",
+      "description": "Solid copper double-sided clock featuring a rich Copper Bloomwork drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 8-Inch Dial",
+        "Elegant Copper Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-CP-BLM-8IN-1.png",
+        "images/products/ART-CP-BLM-8IN-2.png",
+        "images/products/ART-CP-BLM-8IN-3.png"
+      ],
+      "prices": {
+        "tier1": 3450,
+        "tier2": 3450,
+        "tier3": 3450,
+        "tier4": 3450,
+        "tier5": 3450
+      },
+      "active": true
+    },
+    {
+      "code": "ART-SV-BLM-6IN",
+      "finish": "Silver",
+      "pattern": "Bloomwork",
+      "size": "6*4*6 inches",
+      "title": "Silver Bloomwork — Double Sided Station Clock",
+      "description": "Solid Silver double-sided clock featuring a rich Sliver Bloomwork drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 6-Inch Dial",
+        "Elegant Silver Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-SV-BLM-6IN-1.png",
+        null,
+        null
+      ],
+      "prices": {
+        "tier1": 2850,
+        "tier2": 2850,
+        "tier3": 2850,
+        "tier4": 2850,
+        "tier5": 2850
+      },
+      "active": true
+    },
+    {
+      "code": "ART-SV-BLM-8IN",
+      "finish": "Silver",
+      "pattern": "Bloomwork",
+      "size": "8*4*8 inches",
+      "title": "Silver Bloomwork — Double Sided Station Clock",
+      "description": "Solid Silver double-sided clock featuring a rich Sliver Bloomwork drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 8-Inch Dial",
+        "Elegant Silver Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-SV-BLM-8IN-1.png",
+        "images/products/ART-SV-BLM-8IN-2.png",
+        "images/products/ART-SV-BLM-8IN-3.jpg"
+      ],
+      "prices": {
+        "tier1": 2850,
+        "tier2": 2850,
+        "tier3": 2850,
+        "tier4": 2850,
+        "tier5": 2850
+      },
+      "active": true
+    },
+    {
+      "code": "ART-SV-HFE-12IN",
+      "finish": "Silver",
+      "pattern": "Heritage Floral Engraving",
+      "size": "12*5*12 inches",
+      "title": "Silver Heritage Floral Engraving — Double Sided Station Clock",
+      "description": "Solid Silver double-sided clock featuring a rich Silver Heritage Floral Engraving drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 12-Inch Dial",
+        "Elegant Silver Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-SV-HFE-12IN-1.png",
+        null,
+        null
+      ],
+      "prices": {
+        "tier1": 5200,
+        "tier2": 5200,
+        "tier3": 5200,
+        "tier4": 5200,
+        "tier5": 5200
+      },
+      "active": true
+    },
+    {
+      "code": "ART-CP-STJ-6IN",
+      "finish": "Copper",
+      "pattern": "Star Jali",
+      "size": "6*4*6 inches",
+      "title": "Copper Star Jali — Double Sided Station Clock",
+      "description": "Solid Copper double-sided clock featuring a rich Copper Star Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 6-Inch Dial",
+        "Elegant Copper Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-CP-STJ-6IN-1.png",
+        "images/products/ART-CP-STJ-6IN-2.png",
+        null
+      ],
+      "prices": {
+        "tier1": 2850,
+        "tier2": 2850,
+        "tier3": 2850,
+        "tier4": 2850,
+        "tier5": 2850
+      },
+      "active": true
+    },
+    {
+      "code": "ART-CP-STJ-8IN",
+      "finish": "Copper",
+      "pattern": "Star Jali",
+      "size": "8*4*8 inches",
+      "title": "Copper Star Jali — Double Sided Station Clock",
+      "description": "Solid Copper double-sided clock featuring a rich Copper Star Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 8-Inch Dial",
+        "Elegant Copper Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-CP-STJ-8IN-1.png",
+        "images/products/ART-CP-STJ-8IN-2.png",
+        null
+      ],
+      "prices": {
+        "tier1": 3250,
+        "tier2": 3250,
+        "tier3": 3250,
+        "tier4": 3250,
+        "tier5": 3250
+      },
+      "active": true
+    },
+    {
+      "code": "ART-CP-STJ-10IN",
+      "finish": "Copper",
+      "pattern": "Star Jali",
+      "size": "10*5*10 inches",
+      "title": "Copper Star Jali — Double Sided Station Clock",
+      "description": "Solid Copper double-sided clock featuring a rich Copper Star Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 10-Inch Dial",
+        "Elegant Copper Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-CP-STJ-10IN-1.png",
+        "images/products/ART-CP-STJ-10IN-2.png",
+        "images/products/ART-CP-STJ-10IN-3.jpg"
+      ],
+      "prices": {
+        "tier1": 4400,
+        "tier2": 4400,
+        "tier3": 4400,
+        "tier4": 4400,
+        "tier5": 4400
+      },
+      "active": true
+    },
+    {
+      "code": "ART-CP-STJ-12IN",
+      "finish": "Copper",
+      "pattern": "Star Jali",
+      "size": "12*5*12 inches",
+      "title": "Copper Star Jali — Double Sided Station Clock",
+      "description": "Solid Copper double-sided clock featuring a rich Copper Star Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 12-Inch Dial",
+        "Elegant Copper Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-CP-STJ-12IN-1.png",
+        "images/products/ART-CP-STJ-12IN-2.png",
+        "images/products/ART-CP-STJ-12IN-3.jpg"
+      ],
+      "prices": {
+        "tier1": 5200,
+        "tier2": 5200,
+        "tier3": 5200,
+        "tier4": 5200,
+        "tier5": 5200
+      },
+      "active": true
+    },
+    {
+      "code": "ART-BR-STJ-6IN",
+      "finish": "Brass",
+      "pattern": "Star Jali",
+      "size": "6*4*6 inches",
+      "title": "Brass Star Jali — Double Sided Station Clock",
+      "description": "Solid Brass double-sided clock featuring a rich Brass Star Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 6-Inch Dial",
+        "Elegant Brass Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-BR-STJ-6IN-1.png",
+        "images/products/ART-BR-STJ-6IN-2.png",
+        "images/products/ART-BR-STJ-6IN-3.jpg"
+      ],
+      "prices": {
+        "tier1": 2850,
+        "tier2": 2850,
+        "tier3": 2850,
+        "tier4": 2850,
+        "tier5": 2850
+      },
+      "active": true
+    },
+    {
+      "code": "ART-BR-STJ-8IN",
+      "finish": "Brass",
+      "pattern": "Star Jali",
+      "size": "8*4*8 inches",
+      "title": "Brass Star Jali — Double Sided Station Clock",
+      "description": "Solid Brass double-sided clock featuring a rich Brass Star Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 8-Inch Dial",
+        "Elegant Brass Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-BR-STJ-8IN-1.png",
+        "images/products/ART-BR-STJ-8IN-2.png",
+        "images/products/ART-BR-STJ-8IN-3.jpg"
+      ],
+      "prices": {
+        "tier1": 3250,
+        "tier2": 3250,
+        "tier3": 3250,
+        "tier4": 3250,
+        "tier5": 3250
+      },
+      "active": true
+    },
+    {
+      "code": "ART-BR-STJ-10IN",
+      "finish": "Brass",
+      "pattern": "Star Jali",
+      "size": "10*5*10 inches",
+      "title": "Brass Star Jali — Double Sided Station Clock",
+      "description": "Solid Brass double-sided clock featuring a rich Brass Star Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 10-Inch Dial",
+        "Elegant Brass Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-BR-STJ-10IN-1.png",
+        "images/products/ART-BR-STJ-10IN-2.jpg",
+        "images/products/ART-BR-STJ-10IN-3.png"
+      ],
+      "prices": {
+        "tier1": 4400,
+        "tier2": 4400,
+        "tier3": 4400,
+        "tier4": 4400,
+        "tier5": 4400
+      },
+      "active": true
+    },
+    {
+      "code": "ART-BR-STJ-12IN",
+      "finish": "Brass",
+      "pattern": "Star Jali",
+      "size": "12*5*12 inches",
+      "title": "Brass Star Jali — Double Sided Station Clock",
+      "description": "Solid Brass double-sided clock featuring a rich Brass Star Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 12-Inch Dial",
+        "Elegant Brass Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-BR-STJ-12IN-1.png",
+        "images/products/ART-BR-STJ-12IN-2.jpg",
+        "images/products/ART-BR-STJ-12IN-3.png"
+      ],
+      "prices": {
+        "tier1": 5200,
+        "tier2": 5200,
+        "tier3": 5200,
+        "tier4": 5200,
+        "tier5": 5200
+      },
+      "active": true
+    },
+    {
+      "code": "ART-SV-STJ-6IN",
+      "finish": "Silver",
+      "pattern": "Star Jali",
+      "size": "6*4*6 inches",
+      "title": "Silver Star Jali — Double Sided Station Clock",
+      "description": "Solid Silver double-sided clock featuring a rich Silver Star Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 6-Inch Dial",
+        "Elegant Silver Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-SV-STJ-6IN-1.png",
+        "images/products/ART-SV-STJ-6IN-2.png",
+        "images/products/ART-SV-STJ-6IN-3.png"
+      ],
+      "prices": {
+        "tier1": 2850,
+        "tier2": 2850,
+        "tier3": 2850,
+        "tier4": 2850,
+        "tier5": 2850
+      },
+      "active": true
+    },
+    {
+      "code": "ART-SV-STJ-8IN",
+      "finish": "Silver",
+      "pattern": "Star Jali",
+      "size": "8*4*8 inches",
+      "title": "Silver Star Jali — Double Sided Station Clock",
+      "description": "Solid Silver double-sided clock featuring a rich Silver Star Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 8-Inch Dial",
+        "Elegant Silver Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-SV-STJ-8IN-1.png",
+        "images/products/ART-SV-STJ-8IN-2.png",
+        "images/products/ART-SV-STJ-8IN-3.png"
+      ],
+      "prices": {
+        "tier1": 3250,
+        "tier2": 3250,
+        "tier3": 3250,
+        "tier4": 3250,
+        "tier5": 3250
+      },
+      "active": true
+    },
+    {
+      "code": "ART-SV-STJ-10IN",
+      "finish": "Silver",
+      "pattern": "Star Jali",
+      "size": "10*5*10 inches",
+      "title": "Silver Star Jali — Double Sided Station Clock",
+      "description": "Solid Silver double-sided clock featuring a rich Silver Star Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 10-Inch Dial",
+        "Elegant Silver Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-SV-STJ-10IN-1.png",
+        null,
+        null
+      ],
+      "prices": {
+        "tier1": 4400,
+        "tier2": 4400,
+        "tier3": 4400,
+        "tier4": 4400,
+        "tier5": 4400
+      },
+      "active": true
+    },
+    {
+      "code": "ART-SV-STJ-12IN",
+      "finish": "Silver",
+      "pattern": "Star Jali",
+      "size": "12*5*12 inches",
+      "title": "Silver Star Jali — Double Sided Station Clock",
+      "description": "Solid Silver double-sided clock featuring a rich Silver Star Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 12-Inch Dial",
+        "Elegant Silver Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-SV-STJ-12IN-1.png",
+        null,
+        null
+      ],
+      "prices": {
+        "tier1": 4400,
+        "tier2": 4400,
+        "tier3": 4400,
+        "tier4": 4400,
+        "tier5": 4400
+      },
+      "active": true
+    },
+    {
+      "code": "ART-BK-STJ-6IN",
+      "finish": "Black",
+      "pattern": "Star Jali",
+      "size": "6*4*6 inches",
+      "title": "Black Star Jali — Double Sided Station Clock",
+      "description": "Solid Silver double-sided clock featuring a rich Silver Black Star Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 6-Inch Dial",
+        "Elegant Black Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-BK-STJ-6IN-1.png",
+        "images/products/ART-BK-STJ-6IN-2.png",
+        "images/products/ART-BK-STJ-6IN-3.jpg"
+      ],
+      "prices": {
+        "tier1": 2850,
+        "tier2": 2850,
+        "tier3": 2850,
+        "tier4": 2850,
+        "tier5": 2850
+      },
+      "active": true
+    },
+    {
+      "code": "ART-BK-STJ-8IN",
+      "finish": "Black",
+      "pattern": "Star Jali",
+      "size": "8*4*8 inches",
+      "title": "Black Star Jali — Double Sided Station Clock",
+      "description": "Solid Silver double-sided clock featuring a rich Silver Black Star Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 8-Inch Dial",
+        "Elegant Black Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-BK-STJ-8IN-1.png",
+        "images/products/ART-BK-STJ-8IN-2.png",
+        "images/products/ART-BK-STJ-8IN-3.jpg"
+      ],
+      "prices": {
+        "tier1": 3250,
+        "tier2": 3250,
+        "tier3": 3250,
+        "tier4": 3250,
+        "tier5": 3250
+      },
+      "active": true
+    },
+    {
+      "code": "ART-BK-STJ-10IN",
+      "finish": "Black",
+      "pattern": "Star Jali",
+      "size": "10*5*10 inches",
+      "title": "Black Star Jali — Double Sided Station Clock",
+      "description": "Solid Silver double-sided clock featuring a rich Silver Black Star Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 10-Inch Dial",
+        "Elegant Black Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-BK-STJ-10IN-1.png",
+        "images/products/ART-BK-STJ-10IN-2.png",
+        "images/products/ART-BK-STJ-10IN-3.png"
+      ],
+      "prices": {
+        "tier1": 4400,
+        "tier2": 4400,
+        "tier3": 4400,
+        "tier4": 4400,
+        "tier5": 4400
+      },
+      "active": true
+    },
+    {
+      "code": "ART-BK-STJ-12IN",
+      "finish": "Black",
+      "pattern": "Star Jali",
+      "size": "12*5*12 inches",
+      "title": "Black Star Jali — Double Sided Station Clock",
+      "description": "Solid Silver double-sided clock featuring a rich Silver Black Star Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 12-Inch Dial",
+        "Elegant Black Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-BK-STJ-12IN-1.png",
+        "images/products/ART-BK-STJ-12IN-2.png",
+        "images/products/ART-BK-STJ-12IN-3.png"
+      ],
+      "prices": {
+        "tier1": 5200,
+        "tier2": 5200,
+        "tier3": 5200,
+        "tier4": 5200,
+        "tier5": 5200
+      },
+      "active": true
+    },
+    {
+      "code": "ART-CP-CNC-6IN",
+      "finish": "Copper",
+      "pattern": "CNC Jali",
+      "size": "6*4*6 inches",
+      "title": "Copper CNC Jali — Double Sided Station Clock",
+      "description": "Solid Copper double-sided clock featuring a rich Copper CNC Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 6-Inch Dial",
+        "Elegant Copper Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-CP-CNC-6IN-1.png",
+        "images/products/ART-CP-CNC-6IN-2.png",
+        "images/products/ART-CP-CNC-6IN-3.png"
+      ],
+      "prices": {
+        "tier1": 2850,
+        "tier2": 2850,
+        "tier3": 2850,
+        "tier4": 2850,
+        "tier5": 2850
+      },
+      "active": true
+    },
+    {
+      "code": "ART-CP-CNC-8IN",
+      "finish": "Copper",
+      "pattern": "CNC Jali",
+      "size": "8*4*8 inches",
+      "title": "Copper CNC Jali — Double Sided Station Clock",
+      "description": "Solid Copper double-sided clock featuring a rich Copper CNC Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 8-Inch Dial",
+        "Elegant Copper Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-CP-CNC-8IN-1.png",
+        "images/products/ART-CP-CNC-8IN-2.png",
+        "images/products/ART-CP-CNC-8IN-3.png"
+      ],
+      "prices": {
+        "tier1": 3250,
+        "tier2": 3250,
+        "tier3": 3250,
+        "tier4": 3250,
+        "tier5": 3250
+      },
+      "active": true
+    },
+    {
+      "code": "ART-CP-CNC-10IN",
+      "finish": "Copper",
+      "pattern": "CNC Jali",
+      "size": "10*5*10 inches",
+      "title": "Copper CNC Jali — Double Sided Station Clock",
+      "description": "Solid Copper double-sided clock featuring a rich Copper CNC Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 10-Inch Dial",
+        "Elegant Copper Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-CP-CNC-10IN-1.jpg",
+        "images/products/ART-CP-CNC-10IN-2.png",
+        null
+      ],
+      "prices": {
+        "tier1": 4400,
+        "tier2": 4400,
+        "tier3": 4400,
+        "tier4": 4400,
+        "tier5": 4400
+      },
+      "active": true
+    },
+    {
+      "code": "ART-CP-CNC-12IN",
+      "finish": "Copper",
+      "pattern": "CNC Jali",
+      "size": "12*5*12 inches",
+      "title": "Copper CNC Jali — Double Sided Station Clock",
+      "description": "Solid Copper double-sided clock featuring a rich Copper CNC Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 12-Inch Dial",
+        "Elegant Copper Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-CP-CNC-12IN-1.jpg",
+        "images/products/ART-CP-CNC-12IN-2.png",
+        null
+      ],
+      "prices": {
+        "tier1": 5200,
+        "tier2": 5200,
+        "tier3": 5200,
+        "tier4": 5200,
+        "tier5": 5200
+      },
+      "active": true
+    },
+    {
+      "code": "ART-BR-CNC-6IN",
+      "finish": "Brass",
+      "pattern": "CNC Jali",
+      "size": "6*4*6 inches",
+      "title": "Brass CNC Jali — Double Sided Station Clock",
+      "description": "Solid Brass double-sided clock featuring a rich Brass CNC Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 6-Inch Dial",
+        "Elegant Brass Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-BR-CNC-6IN-1.png",
+        "images/products/ART-BR-CNC-6IN-2.jpg",
+        "images/products/ART-BR-CNC-6IN-3.png"
+      ],
+      "prices": {
+        "tier1": 2850,
+        "tier2": 2850,
+        "tier3": 2850,
+        "tier4": 2850,
+        "tier5": 2850
+      },
+      "active": true
+    },
+    {
+      "code": "ART-BR-CNC-8IN",
+      "finish": "Brass",
+      "pattern": "CNC Jali",
+      "size": "8*4*8 inches",
+      "title": "Brass CNC Jali — Double Sided Station Clock",
+      "description": "Solid Brass double-sided clock featuring a rich Brass CNC Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 8-Inch Dial",
+        "Elegant Brass Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-BR-CNC-8IN-1.png",
+        "images/products/ART-BR-CNC-8IN-2.jpg",
+        "images/products/ART-BR-CNC-8IN-3.png"
+      ],
+      "prices": {
+        "tier1": 3250,
+        "tier2": 3250,
+        "tier3": 3250,
+        "tier4": 3250,
+        "tier5": 3250
+      },
+      "active": true
+    },
+    {
+      "code": "ART-BR-CNC-10IN",
+      "finish": "Brass",
+      "pattern": "CNC Jali",
+      "size": "10*5*10 inches",
+      "title": "Brass CNC Jali — Double Sided Station Clock",
+      "description": "Solid Brass double-sided clock featuring a rich Brass CNC Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 10-Inch Dial",
+        "Elegant Brass Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-BR-CNC-10IN-1.png",
+        "images/products/ART-BR-CNC-10IN-2.jpg",
+        "images/products/ART-BR-CNC-10IN-3.png"
+      ],
+      "prices": {
+        "tier1": 4400,
+        "tier2": 4400,
+        "tier3": 4400,
+        "tier4": 4400,
+        "tier5": 4400
+      },
+      "active": true
+    },
+    {
+      "code": "ART-BR-CNC-12IN",
+      "finish": "Brass",
+      "pattern": "CNC Jali",
+      "size": "12*5*12 inches",
+      "title": "Brass CNC Jali — Double Sided Station Clock",
+      "description": "Solid Brass double-sided clock featuring a rich Brass CNC Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 12-Inch Dial",
+        "Elegant Brass Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-BR-CNC-12IN-1.png",
+        "images/products/ART-BR-CNC-12IN-2.jpg",
+        "images/products/ART-BR-CNC-12IN-3.png"
+      ],
+      "prices": {
+        "tier1": 4400,
+        "tier2": 4400,
+        "tier3": 4400,
+        "tier4": 4400,
+        "tier5": 4400
+      },
+      "active": true
+    },
+    {
+      "code": "ART-SV-CNC-6IN",
+      "finish": "Silver",
+      "pattern": "CNC Jali",
+      "size": "6*4*6 inches",
+      "title": "Silver CNC Jali — Double Sided Station Clock",
+      "description": "Solid Silver double-sided clock featuring a rich Silver CNC Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 6-Inch Dial",
+        "Elegant Silver Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-SV-CNC-6IN-1.png",
+        "images/products/ART-SV-CNC-6IN-2.png",
+        "images/products/ART-SV-CNC-6IN-3.png"
+      ],
+      "prices": {
+        "tier1": 2850,
+        "tier2": 2850,
+        "tier3": 2850,
+        "tier4": 2850,
+        "tier5": 2850
+      },
+      "active": true
+    },
+    {
+      "code": "ART-SV-CNC-8IN",
+      "finish": "Silver",
+      "pattern": "CNC Jali",
+      "size": "8*4*8 inches",
+      "title": "Silver CNC Jali — Double Sided Station Clock",
+      "description": "Solid Silver double-sided clock featuring a rich Silver CNC Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 8-Inch Dial",
+        "Elegant Silver Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-SV-CNC-8IN-1.png",
+        "images/products/ART-SV-CNC-8IN-2.png",
+        "images/products/ART-SV-CNC-8IN-3.png"
+      ],
+      "prices": {
+        "tier1": 3250,
+        "tier2": 3250,
+        "tier3": 3250,
+        "tier4": 3250,
+        "tier5": 3250
+      },
+      "active": true
+    },
+    {
+      "code": "ART-SV-CNC-10IN",
+      "finish": "Silver",
+      "pattern": "CNC Jali",
+      "size": "10*5*10 inches",
+      "title": "Silver CNC Jali — Double Sided Station Clock",
+      "description": "Solid Silver double-sided clock featuring a rich Silver CNC Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 10-Inch Dial",
+        "Elegant Silver Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-SV-CNC-10IN-1.png",
+        "images/products/ART-SV-CNC-10IN-2.png",
+        "images/products/ART-SV-CNC-10IN-3.png"
+      ],
+      "prices": {
+        "tier1": 4400,
+        "tier2": 4400,
+        "tier3": 4400,
+        "tier4": 4400,
+        "tier5": 4400
+      },
+      "active": true
+    },
+    {
+      "code": "ART-SV-CNC-12IN",
+      "finish": "Silver",
+      "pattern": "CNC Jali",
+      "size": "12*5*12 inches",
+      "title": "Silver CNC Jali — Double Sided Station Clock",
+      "description": "Solid Silver double-sided clock featuring a rich Silver CNC Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 12-Inch Dial",
+        "Elegant Silver Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-SV-CNC-12IN-1.png",
+        "images/products/ART-SV-CNC-12IN-2.png",
+        "images/products/ART-SV-CNC-12IN-3.png"
+      ],
+      "prices": {
+        "tier1": 5200,
+        "tier2": 5200,
+        "tier3": 5200,
+        "tier4": 5200,
+        "tier5": 5200
+      },
+      "active": true
+    },
+    {
+      "code": "ART-BK-CNC-6IN",
+      "finish": "Black",
+      "pattern": "CNC Jali",
+      "size": "6*4*6 inches",
+      "title": "Black CNC Jali — Double Sided Station Clock",
+      "description": "Solid Black double-sided clock featuring a rich Black CNC Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 6-Inch Dial",
+        "Elegant Black Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-BK-CNC-6IN-1.png",
+        "images/products/ART-BK-CNC-6IN-2.jpg",
+        "images/products/ART-BK-CNC-6IN-3.png"
+      ],
+      "prices": {
+        "tier1": 2850,
+        "tier2": 2850,
+        "tier3": 2850,
+        "tier4": 2850,
+        "tier5": 2850
+      },
+      "active": true
+    },
+    {
+      "code": "ART-BK-CNC-8IN",
+      "finish": "Black",
+      "pattern": "CNC Jali",
+      "size": "8*4*8 inches",
+      "title": "Black CNC Jali — Double Sided Station Clock",
+      "description": "Solid Black double-sided clock featuring a rich Black CNC Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 8-Inch Dial",
+        "Elegant Black Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-BK-CNC-8IN-1.png",
+        "images/products/ART-BK-CNC-8IN-2.jpg",
+        "images/products/ART-BK-CNC-8IN-3.png"
+      ],
+      "prices": {
+        "tier1": 3250,
+        "tier2": 3250,
+        "tier3": 3250,
+        "tier4": 3250,
+        "tier5": 3250
+      },
+      "active": true
+    },
+    {
+      "code": "ART-BK-CNC-10IN",
+      "finish": "Black",
+      "pattern": "CNC Jali",
+      "size": "10*5*10 inches",
+      "title": "Black CNC Jali — Double Sided Station Clock",
+      "description": "Solid Black double-sided clock featuring a rich Black CNC Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 10-Inch Dial",
+        "Elegant Black Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-BK-CNC-10IN-1.jpg",
+        "images/products/ART-BK-CNC-10IN-2.jpg",
+        "images/products/ART-BK-CNC-10IN-3.png"
+      ],
+      "prices": {
+        "tier1": 4400,
+        "tier2": 4400,
+        "tier3": 4400,
+        "tier4": 4400,
+        "tier5": 4400
+      },
+      "active": true
+    },
+    {
+      "code": "ART-BK-CNC-12IN",
+      "finish": "Black",
+      "pattern": "CNC Jali",
+      "size": "12*5*12 inches",
+      "title": "Black CNC Jali — Double Sided Station Clock",
+      "description": "Solid Black double-sided clock featuring a rich Black CNC Jali drum with an antique vintage finish. Clearly readable from both sides, it brings timeless charm to hallways, verandahs, and station-style interiors.",
+      "highlights": [
+        "Timeless Vintage Design",
+        "Intricate Metal Cutwork",
+        "Large 12-Inch Dial",
+        "Elegant Black Finish",
+        "Classic Wall-Bracket Mount",
+        "Designed for Premium Interiors",
+        "Ideal for Homes & Hotels"
+      ],
+      "images": [
+        "images/products/ART-BK-CNC-12IN-1.jpg",
+        "images/products/ART-BK-CNC-12IN-2.jpg",
+        "images/products/ART-BK-CNC-12IN-3.png"
+      ],
+      "prices": {
+        "tier1": 5200,
+        "tier2": 5200,
+        "tier3": 5200,
+        "tier4": 5200,
+        "tier5": 5200
+      },
+      "active": true
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARTIME — Heritage Railway Collection</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- GATE -->
+<div class="gate-wrap" id="gateWrap">
+  <div class="gate-card">
+    <img src="images/logo.jpg" class="gate-logo" alt="ARTIME">
+    <div class="gate-title">Heritage Railway Collection</div>
+    <h1 class="gate-sub">Enter your access code</h1>
+    <input type="password" id="pwInput" placeholder="Access code" autocomplete="off">
+    <button onclick="tryLogin()">View Catalog</button>
+    <div class="gate-error" id="gateError"></div>
+    <div class="gate-footer">Each customer type has its own code that shows the correct pricing.</div>
+  </div>
+</div>
+
+<!-- CATALOG (hidden until unlocked) -->
+<div id="catalogWrap" style="display:none;">
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/logo.jpg" alt="ARTIME">
+      <div class="names">
+        <div class="collection">Heritage Railway Collection</div>
+        <div class="company">ARTIME</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <span class="tier-badge" id="tierBadge"></span>
+      <button class="logout-btn" onclick="logout()">Switch code</button>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <input type="search" id="searchBox" placeholder="Search products…" oninput="render()">
+    <select id="finishFilter" onchange="render()"><option value="">All finishes</option></select>
+    <select id="patternFilter" onchange="render()"><option value="">All patterns</option></select>
+    <select id="sizeFilter" onchange="render()"><option value="">All sizes</option></select>
+  </div>
+  <p class="result-count" id="resultCount"></p>
+
+  <div class="catalog-grid" id="grid"></div>
+</div>
+
+<script src="app.js"></script>
+<script>
+let DATA = null;
+let TIER = null;
+
+function tierFromPassword(pw, data) {
+  for (const [tierKey, val] of Object.entries(data.passwords)) {
+    if (val === pw) return tierKey;
+  }
+  return null;
+}
+
+async function tryLogin() {
+  const pw = document.getElementById('pwInput').value.trim();
+  const errEl = document.getElementById('gateError');
+  errEl.textContent = '';
+  if (!pw) { errEl.textContent = 'Please enter your access code.'; return; }
+  try {
+    if (!DATA) DATA = await loadData();
+    const tier = tierFromPassword(pw, DATA);
+    if (!tier) { errEl.textContent = 'Incorrect code. Please check and try again.'; return; }
+    TIER = tier;
+    sessionStorage.setItem('artime_tier', tier);
+    showCatalog();
+  } catch (e) {
+    errEl.textContent = 'Could not load catalog right now. Please try again.';
+  }
+}
+
+function logout() {
+  sessionStorage.removeItem('artime_tier');
+  location.reload();
+}
+
+function populateFilters() {
+  const finishes = [...new Set(DATA.products.map(p => p.finish))].sort();
+  const patterns = [...new Set(DATA.products.map(p => p.pattern))].sort();
+  const sizes = [...new Set(DATA.products.map(p => p.size))].sort();
+  const fSel = document.getElementById('finishFilter');
+  const pSel = document.getElementById('patternFilter');
+  const sSel = document.getElementById('sizeFilter');
+  finishes.forEach(f => fSel.innerHTML += `<option value="${f}">${f}</option>`);
+  patterns.forEach(p => pSel.innerHTML += `<option value="${p}">${p}</option>`);
+  sizes.forEach(s => sSel.innerHTML += `<option value="${s}">${s}</option>`);
+}
+
+function render() {
+  const q = document.getElementById('searchBox').value.toLowerCase();
+  const fF = document.getElementById('finishFilter').value;
+  const pF = document.getElementById('patternFilter').value;
+  const sF = document.getElementById('sizeFilter').value;
+
+  const items = DATA.products.filter(p => {
+    if (!p.active) return false;
+    if (fF && p.finish !== fF) return false;
+    if (pF && p.pattern !== pF) return false;
+    if (sF && p.size !== sF) return false;
+    if (q && !(p.title.toLowerCase().includes(q) || p.code.toLowerCase().includes(q))) return false;
+    return true;
+  });
+
+  document.getElementById('resultCount').textContent = `${items.length} product${items.length !== 1 ? 's' : ''}`;
+
+  const grid = document.getElementById('grid');
+  if (items.length === 0) {
+    grid.innerHTML = '<div class="empty-state">No products match your search.</div>';
+    return;
+  }
+
+  grid.innerHTML = items.map(p => {
+    const price = p.prices[TIER];
+    const [hero, t1, t2] = p.images;
+    return `
+    <div class="product-card">
+      <div class="product-hero"><img src="${hero || ''}" alt="${p.title}" loading="lazy"></div>
+      <div class="product-body">
+        <div class="product-eyebrow">Heritage Railway Collection · ${p.code}</div>
+        <h3 class="product-title">${p.title}</h3>
+        <p class="product-desc">${p.description}</p>
+        <div class="chip-row">
+          <span class="chip">Size: ${p.size}</span>
+          <span class="chip">${p.finish}</span>
+        </div>
+        <div class="price-row">${money(price)} <span class="gst">+ GST</span></div>
+        <div class="highlights-label">Product Highlights</div>
+        <ul class="highlights-list">${p.highlights.map(h => `<li>${h}</li>`).join('')}</ul>
+        <div class="thumb-row">
+          ${t1 ? `<img src="${t1}" alt="detail">` : ''}
+          ${t2 ? `<img src="${t2}" alt="detail">` : ''}
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function showCatalog() {
+  document.getElementById('gateWrap').style.display = 'none';
+  document.getElementById('catalogWrap').style.display = 'block';
+  document.getElementById('tierBadge').textContent = DATA.tierLabels[TIER] + ' pricing';
+  populateFilters();
+  render();
+}
+
+(async function init() {
+  const savedTier = sessionStorage.getItem('artime_tier');
+  if (savedTier) {
+    DATA = await loadData();
+    if (DATA.passwords[savedTier]) {
+      TIER = savedTier;
+      showCatalog();
+    }
+  }
+  document.getElementById('pwInput').addEventListener('keydown', e => {
+    if (e.key === 'Enter') tryLogin();
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARTIME Admin — Catalog & Pricing</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- GATE -->
+<div class="gate-wrap" id="gateWrap">
+  <div class="gate-card">
+    <img src="images/logo.jpg" class="gate-logo" alt="ARTIME">
+    <div class="gate-title">Admin Panel</div>
+    <h1 class="gate-sub">Enter admin password</h1>
+    <input type="password" id="pwInput" placeholder="Admin password" autocomplete="off">
+    <button onclick="tryLogin()">Enter</button>
+    <div class="gate-error" id="gateError"></div>
+    <div class="gate-footer"><a href="index.html">← Back to catalog</a></div>
+  </div>
+</div>
+
+<!-- ADMIN -->
+<div id="adminWrap" style="display:none;">
+  <div class="admin-wrap">
+    <div class="admin-topbar">
+      <h1>ARTIME — Catalog Admin</h1>
+      <div class="admin-actions">
+        <a class="btn" href="index.html">View catalog</a>
+        <button class="btn" onclick="addProduct()">+ Add product</button>
+        <button class="btn btn-primary" onclick="saveAll()">Save changes to website</button>
+      </div>
+    </div>
+    <div class="status-line" id="statusLine"></div>
+
+    <div class="token-banner">
+      Changes you make here only go live on the website once you press <b>"Save changes to website"</b> —
+      that publishes them to your GitHub repository. You'll need a GitHub token (one-time setup, kept only in this
+      browser tab) — see the field below.
+    </div>
+
+    <div class="settings-panel">
+      <h2>Connection & Publishing</h2>
+      <div class="settings-grid">
+        <div class="field"><label>GitHub username / org</label><input id="ghOwner" value="ARTIME2002"></div>
+        <div class="field"><label>Repository name</label><input id="ghRepo" value="catalog"></div>
+        <div class="field"><label>Branch</label><input id="ghBranch" value="main"></div>
+        <div class="field"><label>GitHub token (not saved anywhere)</label><input id="ghToken" type="password" placeholder="ghp_..."></div>
+      </div>
+    </div>
+
+    <div class="settings-panel">
+      <h2>Customer types &amp; access codes</h2>
+      <div class="settings-grid" id="tierSettings"></div>
+    </div>
+
+    <div class="settings-panel">
+      <h2>Admin password</h2>
+      <div class="settings-grid">
+        <div class="field"><label>Admin password</label><input id="adminPwField"></div>
+      </div>
+    </div>
+
+    <h2 style="margin:26px 0 12px;">Products (<span id="prodCount">0</span>)</h2>
+    <div id="productList"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
