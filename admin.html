@@ -29,26 +29,10 @@
       <div class="admin-actions">
         <a class="btn" href="index.html">View catalog</a>
         <button class="btn" onclick="addProduct()">+ Add product</button>
-        <button class="btn btn-primary" onclick="saveAll()">Save changes to website</button>
+        <button class="btn btn-primary" onclick="saveAll()">Save changes</button>
       </div>
     </div>
     <div class="status-line" id="statusLine"></div>
-
-    <div class="token-banner">
-      Changes you make here only go live on the website once you press <b>"Save changes to website"</b> —
-      that publishes them to your GitHub repository. You'll need a GitHub token (one-time setup, kept only in this
-      browser tab) — see the field below.
-    </div>
-
-    <div class="settings-panel">
-      <h2>Connection & Publishing</h2>
-      <div class="settings-grid">
-        <div class="field"><label>GitHub username / org</label><input id="ghOwner" value="ARTIME2002"></div>
-        <div class="field"><label>Repository name</label><input id="ghRepo" value="catalog"></div>
-        <div class="field"><label>Branch</label><input id="ghBranch" value="main"></div>
-        <div class="field"><label>GitHub token (not saved anywhere)</label><input id="ghToken" type="password" placeholder="ghp_..."></div>
-      </div>
-    </div>
 
     <div class="settings-panel">
       <h2>Customer types &amp; access codes</h2>
@@ -63,6 +47,10 @@
     </div>
 
     <h2 style="margin:26px 0 12px;">Products (<span id="prodCount">0</span>)</h2>
+    <p style="font-size:13px; color:var(--ink-soft); margin:-6px 0 16px;">
+      To change a product photo: upload the new image on your computer to any free image host or your GitHub
+      images folder, then paste its link into the image field below.
+    </p>
     <div id="productList"></div>
   </div>
 </div>
