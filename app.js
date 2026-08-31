@@ -1,5 +1,5 @@
 // Set this to your deployed Cloudflare Worker URL after setup.
-const API_BASE = "https://artime-catalog.YOUR-SUBDOMAIN.workers.dev";
+const API_BASE = "https://artime-catalog.thetimesandcraftexport.workers.dev";
 
 function money(n) {
   return '₹' + Number(n).toLocaleString('en-IN');
