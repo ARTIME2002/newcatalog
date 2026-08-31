@@ -21,7 +21,7 @@
   </div>
 </div>
 
-<!-- CATALOG (hidden until unlocked) -->
+<!-- CATALOG -->
 <div id="catalogWrap" style="display:none;">
   <header class="site-header">
     <div class="brand">
@@ -48,44 +48,49 @@
   <div class="catalog-grid" id="grid"></div>
 </div>
 
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
+  <button class="lightbox-nav prev" onclick="navLightbox(event,-1)">&#8249;</button>
+  <img id="lightboxImg" src="" alt="">
+  <button class="lightbox-nav next" onclick="navLightbox(event,1)">&#8250;</button>
+  <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+
 <script src="app.js"></script>
 <script>
-let DATA = null;
-let TIER = null;
-
-function tierFromPassword(pw, data) {
-  for (const [tierKey, val] of Object.entries(data.passwords)) {
-    if (val === pw) return tierKey;
-  }
-  return null;
-}
+let PRODUCTS = [];
+let TIER_LABEL = "";
+let lightboxImages = [];
+let lightboxIndex = 0;
 
 async function tryLogin() {
   const pw = document.getElementById('pwInput').value.trim();
   const errEl = document.getElementById('gateError');
   errEl.textContent = '';
   if (!pw) { errEl.textContent = 'Please enter your access code.'; return; }
+  errEl.textContent = 'Checking…';
   try {
-    if (!DATA) DATA = await loadData();
-    const tier = tierFromPassword(pw, DATA);
-    if (!tier) { errEl.textContent = 'Incorrect code. Please check and try again.'; return; }
-    TIER = tier;
-    sessionStorage.setItem('artime_tier', tier);
+    const res = await apiPost('/login', { password: pw });
+    if (!res.ok) { errEl.textContent = res.error || 'Incorrect code.'; return; }
+    PRODUCTS = res.products;
+    TIER_LABEL = res.tierLabel;
+    sessionStorage.setItem('artime_pw', pw);
     showCatalog();
   } catch (e) {
-    errEl.textContent = 'Could not load catalog right now. Please try again.';
+    errEl.textContent = 'Could not reach the server. Please try again.';
   }
 }
 
 function logout() {
-  sessionStorage.removeItem('artime_tier');
+  sessionStorage.removeItem('artime_pw');
   location.reload();
 }
 
 function populateFilters() {
-  const finishes = [...new Set(DATA.products.map(p => p.finish))].sort();
-  const patterns = [...new Set(DATA.products.map(p => p.pattern))].sort();
-  const sizes = [...new Set(DATA.products.map(p => p.size))].sort();
+  const finishes = [...new Set(PRODUCTS.map(p => p.finish))].sort();
+  const patterns = [...new Set(PRODUCTS.map(p => p.pattern))].sort();
+  const sizes = [...new Set(PRODUCTS.map(p => p.size))].sort();
   const fSel = document.getElementById('finishFilter');
   const pSel = document.getElementById('patternFilter');
   const sSel = document.getElementById('sizeFilter');
@@ -100,8 +105,7 @@ function render() {
   const pF = document.getElementById('patternFilter').value;
   const sF = document.getElementById('sizeFilter').value;
 
-  const items = DATA.products.filter(p => {
-    if (!p.active) return false;
+  const items = PRODUCTS.filter(p => {
     if (fF && p.finish !== fF) return false;
     if (pF && p.pattern !== pF) return false;
     if (sF && p.size !== sF) return false;
@@ -117,12 +121,16 @@ function render() {
     return;
   }
 
-  grid.innerHTML = items.map(p => {
-    const price = p.prices[TIER];
+  grid.innerHTML = items.map((p, pIdx) => {
+    const imgs = p.images.filter(Boolean);
     const [hero, t1, t2] = p.images;
+    const imgsJson = JSON.stringify(imgs).replace(/"/g, '&quot;');
     return `
     <div class="product-card">
-      <div class="product-hero"><img src="${hero || ''}" alt="${p.title}" loading="lazy"></div>
+      <div class="product-hero" onclick='openLightbox(${imgsJson}, 0, ${JSON.stringify(p.title).replace(/'/g, "&#39;")})'>
+        <img src="${hero || ''}" alt="${p.title}" loading="lazy">
+        <div class="zoom-hint">🔍 Click to zoom</div>
+      </div>
       <div class="product-body">
         <div class="product-eyebrow">Heritage Railway Collection · ${p.code}</div>
         <h3 class="product-title">${p.title}</h3>
@@ -131,34 +139,66 @@ function render() {
           <span class="chip">Size: ${p.size}</span>
           <span class="chip">${p.finish}</span>
         </div>
-        <div class="price-row">${money(price)} <span class="gst">+ GST</span></div>
+        <div class="price-row">${money(p.price)} <span class="gst">+ GST</span></div>
         <div class="highlights-label">Product Highlights</div>
         <ul class="highlights-list">${p.highlights.map(h => `<li>${h}</li>`).join('')}</ul>
         <div class="thumb-row">
-          ${t1 ? `<img src="${t1}" alt="detail">` : ''}
-          ${t2 ? `<img src="${t2}" alt="detail">` : ''}
+          ${t1 ? `<img src="${t1}" alt="detail" onclick='event.stopPropagation(); openLightbox(${imgsJson}, 1, ${JSON.stringify(p.title).replace(/'/g, "&#39;")})'>` : ''}
+          ${t2 ? `<img src="${t2}" alt="detail" onclick='event.stopPropagation(); openLightbox(${imgsJson}, 2, ${JSON.stringify(p.title).replace(/'/g, "&#39;")})'>` : ''}
         </div>
       </div>
     </div>`;
   }).join('');
 }
 
+function openLightbox(imgs, idx, title) {
+  lightboxImages = imgs;
+  lightboxIndex = idx;
+  document.getElementById('lightboxImg').src = imgs[idx];
+  document.getElementById('lightboxCaption').textContent = `${title} — photo ${idx+1} of ${imgs.length}`;
+  document.getElementById('lightbox').classList.add('open');
+  document.querySelectorAll('.lightbox-nav').forEach(b => b.style.display = imgs.length > 1 ? 'flex' : 'none');
+}
+function closeLightbox(e) {
+  if (e.target.id === 'lightbox' || e.target.classList.contains('lightbox-close')) {
+    document.getElementById('lightbox').classList.remove('open');
+  }
+}
+function navLightbox(e, dir) {
+  e.stopPropagation();
+  lightboxIndex = (lightboxIndex + dir + lightboxImages.length) % lightboxImages.length;
+  document.getElementById('lightboxImg').src = lightboxImages[lightboxIndex];
+  const cap = document.getElementById('lightboxCaption').textContent.split(' — ')[0];
+  document.getElementById('lightboxCaption').textContent = `${cap} — photo ${lightboxIndex+1} of ${lightboxImages.length}`;
+}
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('lightbox').classList.contains('open')) return;
+  if (e.key === 'Escape') document.getElementById('lightbox').classList.remove('open');
+  if (e.key === 'ArrowRight') navLightbox(e, 1);
+  if (e.key === 'ArrowLeft') navLightbox(e, -1);
+});
+
 function showCatalog() {
   document.getElementById('gateWrap').style.display = 'none';
   document.getElementById('catalogWrap').style.display = 'block';
-  document.getElementById('tierBadge').textContent = DATA.tierLabels[TIER] + ' pricing';
+  document.getElementById('tierBadge').textContent = TIER_LABEL + ' pricing';
   populateFilters();
   render();
 }
 
 (async function init() {
-  const savedTier = sessionStorage.getItem('artime_tier');
-  if (savedTier) {
-    DATA = await loadData();
-    if (DATA.passwords[savedTier]) {
-      TIER = savedTier;
-      showCatalog();
-    }
+  const savedPw = sessionStorage.getItem('artime_pw');
+  if (savedPw) {
+    try {
+      const res = await apiPost('/login', { password: savedPw });
+      if (res.ok) {
+        PRODUCTS = res.products;
+        TIER_LABEL = res.tierLabel;
+        showCatalog();
+      } else {
+        sessionStorage.removeItem('artime_pw');
+      }
+    } catch (e) { /* stay on gate */ }
   }
   document.getElementById('pwInput').addEventListener('keydown', e => {
     if (e.key === 'Enter') tryLogin();
