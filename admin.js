@@ -1,20 +1,23 @@
 let DATA = null;
-let dirtyImages = {}; // path -> {base64, message}
+let ADMIN_PW = null;
 let dataDirty = false;
 
 async function tryLogin() {
   const pw = document.getElementById('pwInput').value.trim();
   const errEl = document.getElementById('gateError');
   errEl.textContent = '';
+  errEl.textContent = 'Checking…';
   try {
-    if (!DATA) DATA = await loadData();
-    if (pw !== DATA.adminPassword) { errEl.textContent = 'Incorrect password.'; return; }
+    const res = await apiPost('/admin/get', { adminPassword: pw });
+    if (!res.ok) { errEl.textContent = res.error || 'Incorrect password.'; return; }
+    DATA = res.data;
+    ADMIN_PW = pw;
     document.getElementById('gateWrap').style.display = 'none';
     document.getElementById('adminWrap').style.display = 'block';
     renderTierSettings();
     renderProducts();
   } catch (e) {
-    errEl.textContent = 'Could not load catalog data.';
+    errEl.textContent = 'Could not reach the server.';
   }
 }
 
@@ -23,7 +26,6 @@ function setStatus(msg, kind) {
   el.textContent = msg;
   el.className = 'status-line' + (kind ? ' ' + kind : '');
 }
-
 function markDirty() { dataDirty = true; setStatus('You have unsaved changes.', ''); }
 
 /* ---------- Tier settings ---------- */
@@ -54,15 +56,20 @@ function productCard(p, idx) {
   const imgs = p.images;
   const slots = [0,1,2].map(i => `
     <div class="imgbox">
-      <img src="${imgs[i] || ''}" onerror="this.style.opacity=0.2">
+      <img src="${imgs[i] || ''}" onerror="this.style.opacity=0.15">
       <div class="lbl">${i===0?'Main':'Detail '+i}</div>
-      <input type="file" accept="image/*" onchange="onImageChange(${idx}, ${i}, this)">
+    </div>`).join('');
+
+  const imgFields = [0,1,2].map(i => `
+    <div class="field full">
+      <label>Image ${i+1} link/path</label>
+      <input value="${escAttr(imgs[i]||'')}" oninput="p_(${idx}).images[${i}]=this.value; markDirty(); this.previousElementSibling ? null:null;" onblur="refreshThumb(${idx})">
     </div>`).join('');
 
   return `
   <div class="admin-card ${p.active ? '' : 'inactive'}" id="card-${idx}">
     <div class="admin-card-top">
-      <div class="admin-imgs">${slots}</div>
+      <div class="admin-imgs" id="imgs-${idx}">${slots}</div>
       <div class="admin-fields">
         <div class="field full"><label>Title</label>
           <input value="${escAttr(p.title)}" oninput="p_(${idx}).title=this.value; markDirty();"></div>
@@ -78,6 +85,7 @@ function productCard(p, idx) {
           <textarea rows="2" oninput="p_(${idx}).description=this.value; markDirty();">${escHtml(p.description)}</textarea></div>
         <div class="field full"><label>Highlights (one per line)</label>
           <textarea rows="3" oninput="p_(${idx}).highlights=this.value.split('\\n').map(s=>s.trim()).filter(Boolean); markDirty();">${p.highlights.join('\n')}</textarea></div>
+        ${imgFields}
       </div>
     </div>
     <div class="price-grid">
@@ -92,6 +100,16 @@ function productCard(p, idx) {
       <button class="btn btn-danger" onclick="removeProduct(${idx})">Delete product</button>
     </div>
   </div>`;
+}
+
+function refreshThumb(idx) {
+  const imgs = p_(idx).images;
+  const box = document.getElementById(`imgs-${idx}`);
+  box.innerHTML = [0,1,2].map(i => `
+    <div class="imgbox">
+      <img src="${imgs[i] || ''}" onerror="this.style.opacity=0.15">
+      <div class="lbl">${i===0?'Main':'Detail '+i}</div>
+    </div>`).join('');
 }
 
 function p_(idx) { return DATA.products[idx]; }
@@ -118,94 +136,17 @@ function removeProduct(idx) {
   renderProducts();
 }
 
-/* ---------- Image handling ---------- */
-function onImageChange(idx, slot, input) {
-  const file = input.files[0];
-  if (!file) return;
-  const maxW = slot === 0 ? 900 : 500;
-  resizeImageFile(file, maxW, 0.8).then(({base64, blobUrl}) => {
-    const p = p_(idx);
-    const code = p.code || ('product-' + idx);
-    const path = `images/products/${code}-${slot+1}.jpg`;
-    p.images[slot] = path;
-    dirtyImages[path] = base64;
-    document.querySelector(`#card-${idx} .admin-imgs .imgbox:nth-child(${slot+1}) img`).src = blobUrl;
-    markDirty();
-  });
-}
-
-function resizeImageFile(file, maxW, quality) {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = e => {
-      const img = new Image();
-      img.onload = () => {
-        let w = img.width, h = img.height;
-        if (w > maxW) { h = Math.round(h * (maxW / w)); w = maxW; }
-        const canvas = document.createElement('canvas');
-        canvas.width = w; canvas.height = h;
-        canvas.getContext('2d').drawImage(img, 0, 0, w, h);
-        const dataUrl = canvas.toDataURL('image/jpeg', quality);
-        resolve({ base64: dataUrl.split(',')[1], blobUrl: dataUrl });
-      };
-      img.onerror = reject;
-      img.src = e.target.result;
-    };
-    reader.onerror = reject;
-    reader.readAsDataURL(file);
-  });
-}
-
-/* ---------- Publish to GitHub ---------- */
-async function githubPutFile(owner, repo, branch, token, path, base64Content, message) {
-  const url = `https://api.github.com/repos/${owner}/${repo}/contents/${encodeURIComponent(path).replace(/%2F/g,'/')}`;
-  let sha = undefined;
-  const getRes = await fetch(url + `?ref=${branch}`, {
-    headers: { Authorization: `token ${token}`, Accept: 'application/vnd.github+json' }
-  });
-  if (getRes.status === 200) {
-    const j = await getRes.json();
-    sha = j.sha;
-  } else if (getRes.status !== 404) {
-    const j = await getRes.json().catch(() => ({}));
-    throw new Error(`GitHub error reading ${path}: ${j.message || getRes.status}`);
-  }
-  const putRes = await fetch(url, {
-    method: 'PUT',
-    headers: { Authorization: `token ${token}`, Accept: 'application/vnd.github+json' },
-    body: JSON.stringify({ message, content: base64Content, sha, branch })
-  });
-  if (!putRes.ok) {
-    const j = await putRes.json().catch(() => ({}));
-    throw new Error(`GitHub error saving ${path}: ${j.message || putRes.status}`);
-  }
-}
-
+/* ---------- Save ---------- */
 async function saveAll() {
-  const owner = document.getElementById('ghOwner').value.trim();
-  const repo = document.getElementById('ghRepo').value.trim();
-  const branch = document.getElementById('ghBranch').value.trim() || 'main';
-  const token = document.getElementById('ghToken').value.trim();
-  if (!owner || !repo || !token) {
-    setStatus('Please fill in GitHub username, repo, and token before saving.', 'err');
-    return;
-  }
-  setStatus('Publishing changes…', '');
+  setStatus('Saving…', '');
   try {
-    const imgPaths = Object.keys(dirtyImages);
-    for (let i = 0; i < imgPaths.length; i++) {
-      setStatus(`Uploading image ${i+1} of ${imgPaths.length}…`, '');
-      await githubPutFile(owner, repo, branch, token, imgPaths[i], dirtyImages[imgPaths[i]], `Update product image ${imgPaths[i]}`);
-    }
-    setStatus('Saving product data…', '');
-    const dataB64 = btoa(unescape(encodeURIComponent(JSON.stringify(DATA, null, 2))));
-    await githubPutFile(owner, repo, branch, token, 'data.json', dataB64, 'Update catalog data via admin panel');
-
-    dirtyImages = {};
+    const res = await apiPost('/admin/save', { adminPassword: ADMIN_PW, data: DATA });
+    if (!res.ok) { setStatus('Failed: ' + res.error, 'err'); return; }
+    if (DATA.adminPassword !== ADMIN_PW) ADMIN_PW = DATA.adminPassword;
     dataDirty = false;
-    setStatus('✓ Published! Changes are live in a minute or two.', 'ok');
+    setStatus('✓ Saved! Changes are live immediately.', 'ok');
   } catch (e) {
-    setStatus('Failed: ' + e.message, 'err');
+    setStatus('Failed: could not reach the server.', 'err');
   }
 }
 
