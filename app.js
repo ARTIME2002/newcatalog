@@ -1,10 +1,15 @@
-// Shared helpers for loading catalog data
-async function loadData() {
-  const res = await fetch('data.json?t=' + Date.now());
-  if (!res.ok) throw new Error('Could not load catalog data');
-  return res.json();
-}
+// Set this to your deployed Cloudflare Worker URL after setup.
+const API_BASE = "https://artime-catalog.YOUR-SUBDOMAIN.workers.dev";
 
 function money(n) {
   return '₹' + Number(n).toLocaleString('en-IN');
+}
+
+async function apiPost(path, body) {
+  const res = await fetch(API_BASE + path, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body)
+  });
+  return res.json();
 }
