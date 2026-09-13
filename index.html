@@ -48,6 +48,14 @@
   <div class="catalog-grid" id="grid"></div>
 </div>
 
+<!-- CART BAR (sticky) -->
+<div class="cart-bar" id="cartBar">
+  <div class="cart-bar-info">
+    <span id="cartCount">0 items</span> · <span id="cartBarTotal">₹0</span>
+  </div>
+  <button class="btn-view-order" onclick="openCartReview()">View & Place Order</button>
+</div>
+
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
   <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
@@ -71,6 +79,7 @@
     </div>
   </div>
 </div>
+<div class="added-toast" id="addedToast"></div>
 
 <script src="app.js"></script>
 <script>
@@ -78,7 +87,28 @@ let PRODUCTS = [];
 let TIER_LABEL = "";
 let lightboxImages = [];
 let lightboxIndex = 0;
-let pendingOrder = null; // {code,title,size,price,qty}
+let CART = []; // [{code,title,size,finish,price,qty}]
+
+function loadCart() {
+  try {
+    const saved = sessionStorage.getItem('artime_cart');
+    CART = saved ? JSON.parse(saved) : [];
+  } catch (e) { CART = []; }
+}
+function saveCart() {
+  sessionStorage.setItem('artime_cart', JSON.stringify(CART));
+}
+function cartTotal() {
+  return CART.reduce((sum, i) => sum + i.price * i.qty, 0);
+}
+function updateCartBar() {
+  const bar = document.getElementById('cartBar');
+  const count = CART.reduce((n, i) => n + i.qty, 0);
+  if (count === 0) { bar.classList.remove('show'); return; }
+  bar.classList.add('show');
+  document.getElementById('cartCount').textContent = `${count} item${count !== 1 ? 's' : ''}`;
+  document.getElementById('cartBarTotal').textContent = money(cartTotal());
+}
 
 async function tryLogin() {
   const pw = document.getElementById('pwInput').value.trim();
@@ -167,15 +197,15 @@ function render() {
           <label class="qty-label">Qty
             <input type="number" min="1" value="1" class="qty-input" id="qty_${safeId}">
           </label>
-          <button class="btn-order" onclick="startOrder('${p.code}')">Place Order</button>
+          <button class="btn-order" id="addbtn_${safeId}" onclick="addToCart('${p.code}')">Add</button>
         </div>
       </div>
     </div>`;
   }).join('');
 }
 
-/* ---------- Order flow ---------- */
-function startOrder(code) {
+/* ---------- Cart flow ---------- */
+function addToCart(code) {
   const p = PRODUCTS.find(x => x.code === code);
   if (!p) return;
   const safeId = code.replace(/[^a-zA-Z0-9]/g, '_');
@@ -183,59 +213,93 @@ function startOrder(code) {
   let qty = parseInt(qtyEl.value, 10);
   if (!qty || qty < 1) qty = 1;
 
-  pendingOrder = { code: p.code, title: p.title, size: p.size, finish: p.finish, price: p.price, qty };
-  showOrderReview();
+  const existing = CART.find(i => i.code === code);
+  if (existing) {
+    existing.qty += qty;
+  } else {
+    CART.push({ code: p.code, title: p.title, size: p.size, finish: p.finish, price: p.price, qty });
+  }
+  saveCart();
+  updateCartBar();
+  showAddedToast(`${p.title} added`);
 }
 
-function showOrderReview() {
-  const o = pendingOrder;
-  const lineTotal = o.price * o.qty;
-  document.getElementById('orderReviewBody').innerHTML = `
+function showAddedToast(msg) {
+  const t = document.getElementById('addedToast');
+  t.textContent = '✓ ' + msg;
+  t.classList.add('show');
+  clearTimeout(window._toastTimer);
+  window._toastTimer = setTimeout(() => t.classList.remove('show'), 1800);
+}
+
+function removeFromCart(code) {
+  CART = CART.filter(i => i.code !== code);
+  saveCart();
+  updateCartBar();
+  if (CART.length === 0) { closeOrderReview(); return; }
+  renderCartReview();
+}
+
+function updateCartQty(code, val) {
+  let qty = parseInt(val, 10);
+  if (!qty || qty < 1) qty = 1;
+  const item = CART.find(i => i.code === code);
+  if (item) item.qty = qty;
+  saveCart();
+  updateCartBar();
+  renderCartReview();
+}
+
+function openCartReview() {
+  if (CART.length === 0) return;
+  renderCartReview();
+  document.getElementById('orderModal').classList.add('open');
+}
+
+function renderCartReview() {
+  document.getElementById('orderReviewBody').innerHTML = CART.map(o => {
+    const lineTotal = o.price * o.qty;
+    return `
     <div class="order-line">
       <div class="order-line-main">
         <div class="order-line-title">${o.title}</div>
         <div class="order-line-meta">${o.finish} · ${o.size} · Code: ${o.code}</div>
       </div>
       <div class="order-line-qty">
-        Qty: <input type="number" min="1" value="${o.qty}" id="reviewQty" onchange="updateReviewQty(this.value)">
+        Qty: <input type="number" min="1" value="${o.qty}" onchange="updateCartQty('${o.code}', this.value)">
       </div>
       <div class="order-line-price">${money(lineTotal)}</div>
-    </div>
-  `;
-  document.getElementById('orderTotal').textContent = 'Total: ' + money(lineTotal);
-  document.getElementById('orderModal').classList.add('open');
-}
-
-function updateReviewQty(val) {
-  let qty = parseInt(val, 10);
-  if (!qty || qty < 1) qty = 1;
-  pendingOrder.qty = qty;
-  showOrderReview();
+      <button class="order-line-remove" onclick="removeFromCart('${o.code}')" title="Remove">&times;</button>
+    </div>`;
+  }).join('');
+  document.getElementById('orderTotal').textContent = 'Total: ' + money(cartTotal());
 }
 
 function closeOrderReview() {
   document.getElementById('orderModal').classList.remove('open');
-  pendingOrder = null;
 }
 
 function sendOrderToWhatsApp() {
-  const o = pendingOrder;
-  if (!o) return;
-  const lineTotal = o.price * o.qty;
-  const lines = [
-    `Hi ARTIME, I'd like to place an order:`,
-    ``,
-    `${o.title}`,
-    `Finish: ${o.finish} | Size: ${o.size} | Code: ${o.code}`,
-    `Quantity: ${o.qty}`,
-    `Price: ${money(o.price)} each`,
-    `Total: ${money(lineTotal)}`,
-    ``,
-    `(Sent from the ${TIER_LABEL} catalog)`
-  ];
+  if (CART.length === 0) return;
+  const lines = [`Hi ARTIME, I'd like to place an order:`, ``];
+  CART.forEach((o, i) => {
+    const lineTotal = o.price * o.qty;
+    lines.push(`${i + 1}. ${o.title}`);
+    lines.push(`   Finish: ${o.finish} | Size: ${o.size} | Code: ${o.code}`);
+    lines.push(`   Quantity: ${o.qty} × ${money(o.price)} = ${money(lineTotal)}`);
+    lines.push(``);
+  });
+  lines.push(`Grand Total: ${money(cartTotal())}`);
+  lines.push(``);
+  lines.push(`(Sent from the ${TIER_LABEL} catalog)`);
+
   const text = encodeURIComponent(lines.join('\n'));
   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
   window.open(url, '_blank');
+
+  CART = [];
+  saveCart();
+  updateCartBar();
   closeOrderReview();
 }
 
@@ -280,6 +344,8 @@ function showCatalog() {
 }
 
 (async function init() {
+  loadCart();
+  updateCartBar();
   const savedPw = sessionStorage.getItem('artime_pw');
   if (savedPw) {
     try {
