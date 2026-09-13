@@ -57,12 +57,28 @@
   <div class="lightbox-caption" id="lightboxCaption"></div>
 </div>
 
+<!-- ORDER REVIEW MODAL -->
+<div class="order-modal" id="orderModal">
+  <div class="order-modal-card">
+    <div class="order-modal-header">
+      <h2>Review your order</h2>
+      <button class="order-close" onclick="closeOrderReview()">&times;</button>
+    </div>
+    <div class="order-modal-body" id="orderReviewBody"></div>
+    <div class="order-modal-footer">
+      <div class="order-total" id="orderTotal"></div>
+      <button class="btn-whatsapp" onclick="sendOrderToWhatsApp()">Send order on WhatsApp</button>
+    </div>
+  </div>
+</div>
+
 <script src="app.js"></script>
 <script>
 let PRODUCTS = [];
 let TIER_LABEL = "";
 let lightboxImages = [];
 let lightboxIndex = 0;
+let pendingOrder = null; // {code,title,size,price,qty}
 
 async function tryLogin() {
   const pw = document.getElementById('pwInput').value.trim();
@@ -125,6 +141,7 @@ function render() {
     const imgs = p.images.filter(Boolean);
     const [hero, t1, t2] = p.images;
     const imgsJson = JSON.stringify(imgs).replace(/"/g, '&quot;');
+    const safeId = p.code.replace(/[^a-zA-Z0-9]/g, '_');
     return `
     <div class="product-card">
       <div class="product-hero" onclick='openLightbox(${imgsJson}, 0, ${JSON.stringify(p.title).replace(/'/g, "&#39;")})'>
@@ -146,11 +163,83 @@ function render() {
           ${t1 ? `<img src="${t1}" alt="detail" onclick='event.stopPropagation(); openLightbox(${imgsJson}, 1, ${JSON.stringify(p.title).replace(/'/g, "&#39;")})'>` : ''}
           ${t2 ? `<img src="${t2}" alt="detail" onclick='event.stopPropagation(); openLightbox(${imgsJson}, 2, ${JSON.stringify(p.title).replace(/'/g, "&#39;")})'>` : ''}
         </div>
+        <div class="order-row">
+          <label class="qty-label">Qty
+            <input type="number" min="1" value="1" class="qty-input" id="qty_${safeId}">
+          </label>
+          <button class="btn-order" onclick="startOrder('${p.code}')">Place Order</button>
+        </div>
       </div>
     </div>`;
   }).join('');
 }
 
+/* ---------- Order flow ---------- */
+function startOrder(code) {
+  const p = PRODUCTS.find(x => x.code === code);
+  if (!p) return;
+  const safeId = code.replace(/[^a-zA-Z0-9]/g, '_');
+  const qtyEl = document.getElementById('qty_' + safeId);
+  let qty = parseInt(qtyEl.value, 10);
+  if (!qty || qty < 1) qty = 1;
+
+  pendingOrder = { code: p.code, title: p.title, size: p.size, finish: p.finish, price: p.price, qty };
+  showOrderReview();
+}
+
+function showOrderReview() {
+  const o = pendingOrder;
+  const lineTotal = o.price * o.qty;
+  document.getElementById('orderReviewBody').innerHTML = `
+    <div class="order-line">
+      <div class="order-line-main">
+        <div class="order-line-title">${o.title}</div>
+        <div class="order-line-meta">${o.finish} · ${o.size} · Code: ${o.code}</div>
+      </div>
+      <div class="order-line-qty">
+        Qty: <input type="number" min="1" value="${o.qty}" id="reviewQty" onchange="updateReviewQty(this.value)">
+      </div>
+      <div class="order-line-price">${money(lineTotal)}</div>
+    </div>
+  `;
+  document.getElementById('orderTotal').textContent = 'Total: ' + money(lineTotal);
+  document.getElementById('orderModal').classList.add('open');
+}
+
+function updateReviewQty(val) {
+  let qty = parseInt(val, 10);
+  if (!qty || qty < 1) qty = 1;
+  pendingOrder.qty = qty;
+  showOrderReview();
+}
+
+function closeOrderReview() {
+  document.getElementById('orderModal').classList.remove('open');
+  pendingOrder = null;
+}
+
+function sendOrderToWhatsApp() {
+  const o = pendingOrder;
+  if (!o) return;
+  const lineTotal = o.price * o.qty;
+  const lines = [
+    `Hi ARTIME, I'd like to place an order:`,
+    ``,
+    `${o.title}`,
+    `Finish: ${o.finish} | Size: ${o.size} | Code: ${o.code}`,
+    `Quantity: ${o.qty}`,
+    `Price: ${money(o.price)} each`,
+    `Total: ${money(lineTotal)}`,
+    ``,
+    `(Sent from the ${TIER_LABEL} catalog)`
+  ];
+  const text = encodeURIComponent(lines.join('\n'));
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
+  window.open(url, '_blank');
+  closeOrderReview();
+}
+
+/* ---------- Lightbox ---------- */
 function openLightbox(imgs, idx, title) {
   lightboxImages = imgs;
   lightboxIndex = idx;
@@ -172,10 +261,14 @@ function navLightbox(e, dir) {
   document.getElementById('lightboxCaption').textContent = `${cap} — photo ${lightboxIndex+1} of ${lightboxImages.length}`;
 }
 document.addEventListener('keydown', e => {
-  if (!document.getElementById('lightbox').classList.contains('open')) return;
-  if (e.key === 'Escape') document.getElementById('lightbox').classList.remove('open');
-  if (e.key === 'ArrowRight') navLightbox(e, 1);
-  if (e.key === 'ArrowLeft') navLightbox(e, -1);
+  if (document.getElementById('lightbox').classList.contains('open')) {
+    if (e.key === 'Escape') document.getElementById('lightbox').classList.remove('open');
+    if (e.key === 'ArrowRight') navLightbox(e, 1);
+    if (e.key === 'ArrowLeft') navLightbox(e, -1);
+  }
+  if (e.key === 'Escape' && document.getElementById('orderModal').classList.contains('open')) {
+    closeOrderReview();
+  }
 });
 
 function showCatalog() {
