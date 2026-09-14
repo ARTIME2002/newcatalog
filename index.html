@@ -107,7 +107,7 @@ function updateCartBar() {
   if (count === 0) { bar.classList.remove('show'); return; }
   bar.classList.add('show');
   document.getElementById('cartCount').textContent = `${count} item${count !== 1 ? 's' : ''}`;
-  document.getElementById('cartBarTotal').textContent = money(cartTotal());
+  document.getElementById('cartBarTotal').textContent = money(cartTotal()) + ' + GST';
 }
 
 async function tryLogin() {
@@ -268,11 +268,11 @@ function renderCartReview() {
       <div class="order-line-qty">
         Qty: <input type="number" min="1" value="${o.qty}" onchange="updateCartQty('${o.code}', this.value)">
       </div>
-      <div class="order-line-price">${money(lineTotal)}</div>
+      <div class="order-line-price">${money(lineTotal)} + GST</div>
       <button class="order-line-remove" onclick="removeFromCart('${o.code}')" title="Remove">&times;</button>
     </div>`;
   }).join('');
-  document.getElementById('orderTotal').textContent = 'Total: ' + money(cartTotal());
+  document.getElementById('orderTotal').textContent = 'Total: ' + money(cartTotal()) + ' + GST';
 }
 
 function closeOrderReview() {
@@ -286,10 +286,10 @@ function sendOrderToWhatsApp() {
     const lineTotal = o.price * o.qty;
     lines.push(`${i + 1}. ${o.title}`);
     lines.push(`   Finish: ${o.finish} | Size: ${o.size} | Code: ${o.code}`);
-    lines.push(`   Quantity: ${o.qty} × ${money(o.price)} = ${money(lineTotal)}`);
+    lines.push(`   Quantity: ${o.qty} × ${money(o.price)} = ${money(lineTotal)} + GST`);
     lines.push(``);
   });
-  lines.push(`Grand Total: ${money(cartTotal())}`);
+  lines.push(`Grand Total: ${money(cartTotal())} + GST`);
   lines.push(``);
   lines.push(`(Sent from the ${TIER_LABEL} catalog)`);
 
