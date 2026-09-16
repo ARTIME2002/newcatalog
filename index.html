@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ARTIME — Heritage Railway Collection</title>
+<title>ARTIME — Handcrafted Wall Clocks</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
 <div class="gate-wrap" id="gateWrap">
   <div class="gate-card">
     <img src="images/logo.jpg" class="gate-logo" alt="ARTIME">
-    <div class="gate-title">Heritage Railway Collection</div>
+    <div class="gate-title">Fine Handcrafted Clocks</div>
     <h1 class="gate-sub">Enter your access code</h1>
     <input type="password" id="pwInput" placeholder="Access code" autocomplete="off">
     <button onclick="tryLogin()">View Catalog</button>
@@ -27,7 +27,7 @@
     <div class="brand">
       <img src="images/logo.jpg" alt="ARTIME">
       <div class="names">
-        <div class="collection">Heritage Railway Collection</div>
+        <div class="collection">Fine Handcrafted Clocks</div>
         <div class="company">ARTIME</div>
       </div>
     </div>
@@ -39,6 +39,7 @@
 
   <div class="toolbar">
     <input type="search" id="searchBox" placeholder="Search products…" oninput="render()">
+    <select id="collectionFilter" onchange="render()"><option value="">All collections</option></select>
     <select id="finishFilter" onchange="render()"><option value="">All finishes</option></select>
     <select id="patternFilter" onchange="render()"><option value="">All patterns</option></select>
     <select id="sizeFilter" onchange="render()"><option value="">All sizes</option></select>
@@ -134,12 +135,15 @@ function logout() {
 }
 
 function populateFilters() {
+  const collections = [...new Set(PRODUCTS.map(p => p.collection).filter(Boolean))].sort();
   const finishes = [...new Set(PRODUCTS.map(p => p.finish))].sort();
   const patterns = [...new Set(PRODUCTS.map(p => p.pattern))].sort();
   const sizes = [...new Set(PRODUCTS.map(p => p.size))].sort();
+  const cSel = document.getElementById('collectionFilter');
   const fSel = document.getElementById('finishFilter');
   const pSel = document.getElementById('patternFilter');
   const sSel = document.getElementById('sizeFilter');
+  collections.forEach(c => cSel.innerHTML += `<option value="${c}">${c}</option>`);
   finishes.forEach(f => fSel.innerHTML += `<option value="${f}">${f}</option>`);
   patterns.forEach(p => pSel.innerHTML += `<option value="${p}">${p}</option>`);
   sizes.forEach(s => sSel.innerHTML += `<option value="${s}">${s}</option>`);
@@ -147,11 +151,13 @@ function populateFilters() {
 
 function render() {
   const q = document.getElementById('searchBox').value.toLowerCase();
+  const cF = document.getElementById('collectionFilter').value;
   const fF = document.getElementById('finishFilter').value;
   const pF = document.getElementById('patternFilter').value;
   const sF = document.getElementById('sizeFilter').value;
 
   const items = PRODUCTS.filter(p => {
+    if (cF && p.collection !== cF) return false;
     if (fF && p.finish !== fF) return false;
     if (pF && p.pattern !== pF) return false;
     if (sF && p.size !== sF) return false;
@@ -179,7 +185,7 @@ function render() {
         <div class="zoom-hint">🔍 Click to zoom</div>
       </div>
       <div class="product-body">
-        <div class="product-eyebrow">Heritage Railway Collection · ${p.code}</div>
+        <div class="product-eyebrow">${p.collection} · ${p.code}</div>
         <h3 class="product-title">${p.title}</h3>
         <p class="product-desc">${p.description}</p>
         <div class="chip-row">
