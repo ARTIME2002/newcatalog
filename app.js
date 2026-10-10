@@ -1,11 +1,13 @@
-// Set this to your deployed Cloudflare Worker URL
+// Cloudflare Worker URL
 const API_BASE = "https://artime-catalog.thetimesandcraftexport.workers.dev";
 const WHATSAPP_NUMBER = "917229922002"; // country code + number, no + or spaces
 
 function money(n) {
   return '₹' + Number(n).toLocaleString('en-IN');
 }
-
+function esc(s) {
+  return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
 async function apiPost(path, body) {
   const res = await fetch(API_BASE + path, {
     method: "POST",
